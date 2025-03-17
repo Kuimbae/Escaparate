@@ -1,0 +1,52 @@
+/* Estilo para el menú desplegable */
+
+
+.menu {
+    text-decoration: none;
+    color: #7e6767;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.tipo {
+    text-decoration: none;
+    color: #ee3b3b;
+    padding: 0px;
+}
+
+li:hover > ul.submenu {
+    display: block;
+}
+
+a.dropdown {
+    cursor: pointer;
+}
+
+/* Estilo para la barra lateral */
+.barra-lateral {
+    width: 200px;
+    background-color: #c0b1b1;
+    padding: 10px;
+}
+
+.barra-lateral h2 {
+    text-align: center;
+    color: #ee3b3b;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    padding: 8px 0;
+}
+
