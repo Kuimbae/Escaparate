@@ -1,3 +1,4 @@
+Día 17/03
 1.- Hemos elegido el metodo kanban para trabajar.
 2.- Hemos escrito nuestros normas, objetivos y compromisos de equipo
 3.- Creamos nuestro tablero kanban para visualizar nuestras tareas
