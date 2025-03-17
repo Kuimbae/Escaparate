@@ -1,0 +1,109 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7fafc;
+    display: flex;
+}
+
+.Barra-lateral {
+    width: 250px;
+    background-color: #2d3748;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.Barra-lateral h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.Barra-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.Barra-lateral ul li {
+    margin: 15px 0;
+}
+
+.Barra-lateral ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.Barra-lateral ul li a:hover {
+    background-color: #4a5568;
+}
+
+.contenido-de-main {
+    flex: 1;
+    padding: 30px;
+}
+
+.contenido-de-main h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.articulo {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.articulo:hover {
+    transform: translateY(-5px);
+}
+
+.articulo img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.articulo h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.articulo p {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.detalles-del-producto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+.stock {
+    font-size: 14px;
+    color: #4a5568;
+}
