@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada Responsive</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <div class="navbar">
+            <!-- Menú hamburguesa -->
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+            
+            <!-- Menú desplegable -->
+            <nav id="menu" class="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Producto</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón de Suscribirse -->
+            <div class="subscribe">
+                <button class="subscribe-btn">Suscribirse</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección principal con fondo completo -->
+    <section class="hero">
+        <div class="search-container">
+            <input type="text" placeholder="Buscar..." class="search-bar">
+            <button class="search-btn">🔍</button>
+        </div>
+    </section>
+
+</body>
+</html>
+
+<script>
+    document.getElementById("menu-icon").addEventListener("click", function() {
+    document.getElementById("menu").classList.toggle("active");
+});
+</script>

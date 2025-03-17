@@ -107,3 +107,145 @@ body {
     font-size: 14px;
     color: #4a5568;
 }
+
+
+
+
+
+
+/*estilos de portada*/
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fondo de pantalla completo */
+body {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1500x800') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Menú hamburguesa */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Menú desplegable */
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+}
+
+.menu ul li a:hover {
+    background-color: #444;
+}
+
+/* Botón de Suscribirse */
+.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Sección Hero (Fondo + Barra de Búsqueda) */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.search-bar {
+    border: none;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 20px;
+}
+
+.search-btn {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Estilos Responsivos */
+@media screen and (max-width: 768px) {
+    .subscribe-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .search-container {
+        width: 80%;
+    }
+
+    .menu {
+        top: 50px;
+        left: 10px
