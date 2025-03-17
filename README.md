@@ -5,3 +5,4 @@
 4.- César ha creado el github y nos lo ha compartido.
 5.- Hemos elegido el tema de nuestra página, en este proyecto vamos a realizar una página web de una tienda de moda.
 6.- Investigamos sobre páginas web de tiendas, fotografías...
+7.- Creamos el html principal y dividimos el trabajo
