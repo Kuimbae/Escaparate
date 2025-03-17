@@ -1,0 +1,232 @@
+/* Reseteo de márgenes y paddings para asegurar consistencia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del body y la estructura base */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between; /* Esto permite que el footer quede en la parte de abajo */
+}
+
+/* Estilo del encabezado */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 30px; /* Espacio entre el header y el contenedor de login */
+}
+
+/* Estilos para el contenedor principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Esto hace que el main ocupe el espacio restante */
+    padding: 20px;
+}
+
+/* Estilos del formulario de login */
+.login-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilo del título dentro del formulario */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Agrupación de los inputs */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Botón de inicio de sesión */
+button.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #45a049;
+}
+
+/* Enlaces de texto */
+.link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.link a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos de la sección de suscripción */
+.footer-section.subscribe {
+    margin-bottom: 20px;
+}
+
+.footer-section.subscribe h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    background-color: #45a049;
+}
+
+/* Estilos de las redes sociales */
+.footer-section .social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-section .social-media li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-section .social-media li a:hover {
+    color: #4CAF50;
+}
+/* Estilo para el formulario de suscripción */
+.footer-section.subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-section.subscribe input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.footer-section.subscribe label.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.footer-section.subscribe label.subscribe-btn:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para el mensaje de éxito */
+.success-message {
+    display: none;
+    background-color: #f4f4f4;
+    color: green;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.5); /* Comienza pequeño */
+    animation: growMessage 1s forwards; /* Aplicamos la animación */
+}
+@keyframes growMessage {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Inicia en tamaño pequeño */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Aumenta al tamaño original */
+    }
+}
+
+/* Mostrar el mensaje cuando el checkbox está marcado */
+.subscription-checkbox:checked + .success-message {
+    display: block;
+}
+
+
+
+
+/* Responsividad para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    footer {
+        padding: 15px 0;
+    }
+
+    .footer-section.subscribe h3 {
+        font-size: 18px;
+    }
+}
