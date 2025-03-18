@@ -34,6 +34,13 @@ a.dropdown {
 .barra-lateral {
     width: 200px;
     padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #fff; /* Fondo blanco para la barra lateral */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para la barra lateral */
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
 }
 
 .barra-lateral h2 {
@@ -78,7 +85,7 @@ body::before {
     position: fixed;
     top: 0;
     left: 0;
-    width: 97%;
+    width: 100%;
     height: 100%;
     background: url('https://www.chio-lecca.edu.pe/cdn/shop/articles/chio-lecca-blog-estilo-y-moda.jpg?v=1673918894') center/cover no-repeat;
     opacity: 0.5; /* Ajusta la opacidad */
