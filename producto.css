@@ -31,15 +31,18 @@ a.dropdown {
     cursor: pointer;
 }
 
-
+header{
+    width: 170%;
+    background-color: #ca2f2f;
+}
 h1 {
-    color: #d81c1c;
+  
+    color: black;
     font-size: 50px;
-    margin-top: 50px;
+    margin-top: auto;
     text-align: center;
     background-color: #ffffff;
     padding: 10px;
-    display: inline-block;
     border-radius: 5px;
 }
 
