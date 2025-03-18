@@ -323,7 +323,7 @@ body, html {
     font-size: 18px;
     outline: none;
     border-radius: 20px;
-    width: 85%; /* AjPara que ocupe más espacio dentro del contenedor */
+    width: 65%; /* AjPara que ocupe más espacio dentro del contenedor */
     
 }
 
