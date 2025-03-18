@@ -58,7 +58,7 @@ h1 {
     font-size: 50px;
     color: BLACK;
 }
-/* Estilos para el contenedor principal */
+
 main {
     display: flex;
     justify-content: center;
