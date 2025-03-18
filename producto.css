@@ -31,9 +31,22 @@ a.dropdown {
     cursor: pointer;
 }
 
+
+h1 {
+    color: #d81c1c;
+    font-size: 50px;
+    margin-top: 50px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+
 /* Estilo para la barra lateral */
 .barra-lateral {
-    width: 200px;
+    width: auto;
     padding: 10px;
     position: fixed;
     top: 0;
@@ -41,22 +54,17 @@ a.dropdown {
     height: 100%;
     background-color: #ca2f2f; /* Fondo blanco para la barra lateral */
     box-shadow: 2px 0 5px rgba(49, 42, 42, 0.1); /* Sombra para la barra lateral */
-    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+    z-index: 500; /* Asegura que la barra esté por encima de otros elementos */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
 }
 
-.barra-lateral h2 {
-    text-align: center;
-    color: #252323;
-    margin-bottom: 55px; /* Añade espacio debajo del texto */
-}
 
 ul {
     padding: 0;
     color: #252323;
 }
-
-ul li {
-    padding: 8px 0;
+li {
+    padding: 16px 0;
     color: #252323;
 }
 
@@ -65,7 +73,7 @@ ul li {
     display: grid;         /* Activa el diseño flexible */
     grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
     justify-content: center; /* Centra las imágenes horizontalmente */
-    gap: 55px;            /* Espacio entre imágenes */
+    gap: 75px;            /* Espacio entre imágenes */
     padding: 2px;        /* Espaciado alrededor */
     margin: 0 auto;       /* Centra el contenedor */
     position: fixed;      /* Fija el contenedor en la pantalla */
@@ -76,18 +84,16 @@ ul li {
 }
 
 .contenedor-imagenes img {
-    width: 100%;       /* Ancho al 100% del contenedor */
-    height: 200px;    /* Altura fija para todas las imágenes */
+    width: 150%;       /* Ancho al 100% del contenedor */
+    height: 150px;    /* Altura fija para todas las imágenes */
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
     border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    box-shadow: 2px 2px 10px rgba(204, 21, 21, 0.2); /* Sombra ligera */
     transition: transform 0.3s ease-in-out; /* Efecto al pasar el mouse */
     position: relative; /* Posiciona el contenedor de la imagen */
     
 }
-
-
-    
+  
     
 
 .contenedor-imagenes img:hover + .overlay {
