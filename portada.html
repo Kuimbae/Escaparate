@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portada Responsive</title>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- CDN de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <script defer src="script.js"></script>
 </head>
+
 <body>
+    <video autoplay loop muted playsinline id="video-fondo">
+        <source src="13006-243739862.mp4" type="video/mp4">
+    </video>
 
     <!-- Barra de navegación -->
     <header>
-        <div class="navbar">
+        <section class="navbar">
+
             <!-- Menú hamburguesa -->
-            <div class="menu-icon" id="menu-icon">&#9776;</div>
-            
+            <section class="menu-icon" id="menu-icon">&#9776;</section>
+
             <!-- Menú desplegable -->
             <nav id="menu" class="menu">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Producto</a></li>
+                    <li><a href="portada.html">Inicio</a></li>
+                    <li><a href="producto.html">Producto</a></li>
                 </ul>
             </nav>
 
             <!-- Botón de Suscribirse -->
-            <div class="subscribe">
-                <button class="subscribe-btn">Suscribirse</button>
-            </div>
-        </div>
+            <section class="iniciar-sesion">
+                <button class="subscribe-btn" onclick="location.href='login.html'">Iniciar sesión</button>
+            </section>
+
+        </section>
     </header>
 
     <!-- Sección principal con fondo completo -->
-    <section class="hero">
-        <div class="search-container">
-            <input type="text" placeholder="Buscar..." class="search-bar">
-            <button class="search-btn">🔍</button>
-        </div>
+    <section class="search-container">
+        <input type="text" placeholder="Buscar..." class="search-bar">
+        <button class="search-btn" onclick="buscarProductos()"> <i class="fas fa-search"></i>
+        </button>
+
     </section>
 
-</body>
-</html>
 
+</body>
 <script>
-    document.getElementById("menu-icon").addEventListener("click", function() {
-    document.getElementById("menu").classList.toggle("active");
-});
+    document.getElementById("menu-icon").addEventListener("click", function () {
+        document.getElementById("menu").classList.toggle("active");
+    });
+
+
 </script>
+
+</html>
