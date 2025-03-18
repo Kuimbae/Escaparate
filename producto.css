@@ -64,19 +64,20 @@ ul li {
     grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
     justify-content: center; /* Centra las imágenes horizontalmente */
     gap: 10px;            /* Espacio entre imágenes */
-    padding: 20px;        /* Espaciado alrededor */
+    padding: 2px;        /* Espaciado alrededor */
     margin: 0 auto;       /* Centra el contenedor */
     position: fixed;      /* Fija el contenedor en la pantalla */
     top: 50%;             /* Centra verticalmente */
     left: 50%;            /* Centra horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
     z-index: 0;        /* Asegura que el contenedor esté por debajo del fondo */
-}
+     }
 
 /* Estilos para las imágenes */
 .contenedor-imagenes img {
-    width: 200px;       /* Ancho fijo para que sean uniformes */
-    height: auto;       /* Mantiene la proporción */
+    width: 80%;       /* Ancho al 100% del contenedor */
+    height: 100%;    /* Altura al 100% del contenedor */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
     border-radius: 10px; /* Esquinas redondeadas */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
     transition: transform 0.3s ease-in-out; /* Efecto al pasar el mouse */
