@@ -3,7 +3,7 @@
 
 .menu {
     text-decoration: none;
-    color: #7e6767;
+    color: #1f1717;
     list-style: none;
     padding: 0;
     margin-left: 15px;
@@ -19,7 +19,7 @@
 
 .tipo {
     text-decoration: none;
-    color: #ee3b3b;
+    color: #201c1c;
     padding: 0px;
 }
 
@@ -39,23 +39,25 @@ a.dropdown {
     top: 0;
     left: 0;
     height: 100%;
-    background-color: #fff; /* Fondo blanco para la barra lateral */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para la barra lateral */
+    background-color: #ca2f2f; /* Fondo blanco para la barra lateral */
+    box-shadow: 2px 0 5px rgba(49, 42, 42, 0.1); /* Sombra para la barra lateral */
     z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
 }
 
 .barra-lateral h2 {
     text-align: center;
-    color: #ee3b3b;
-    margin-bottom: 45px; /* Añade espacio debajo del texto */
+    color: #252323;
+    margin-bottom: 55px; /* Añade espacio debajo del texto */
 }
 
 ul {
     padding: 0;
+    color: #252323;
 }
 
 ul li {
     padding: 8px 0;
+    color: #252323;
 }
 
 /* Contenedor de imágenes */
@@ -63,7 +65,7 @@ ul li {
     display: grid;         /* Activa el diseño flexible */
     grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
     justify-content: center; /* Centra las imágenes horizontalmente */
-    gap: 10px;            /* Espacio entre imágenes */
+    gap: 55px;            /* Espacio entre imágenes */
     padding: 2px;        /* Espaciado alrededor */
     margin: 0 auto;       /* Centra el contenedor */
     position: fixed;      /* Fija el contenedor en la pantalla */
@@ -71,22 +73,35 @@ ul li {
     left: 50%;            /* Centra horizontalmente */
     transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
     z-index: 0;        /* Asegura que el contenedor esté por debajo del fondo */
-     }
+}
 
-/* Estilos para las imágenes */
 .contenedor-imagenes img {
-    width: 80%;       /* Ancho al 100% del contenedor */
-    height: 100%;    /* Altura al 100% del contenedor */
+    width: 100%;       /* Ancho al 100% del contenedor */
+    height: 200px;    /* Altura fija para todas las imágenes */
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
     border-radius: 10px; /* Esquinas redondeadas */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
     transition: transform 0.3s ease-in-out; /* Efecto al pasar el mouse */
+    position: relative; /* Posiciona el contenedor de la imagen */
+    
 }
+
+
+    
+    
+
+.contenedor-imagenes img:hover + .overlay {
+    opacity: 1; /* Muestra la superposición al pasar el mouse */
+    
+}
+
 
 /* Efecto al pasar el mouse */
 .contenedor-imagenes img:hover {
-    transform: scale(1.1); /* Hace la imagen un poco más grande */
+    transform: scale(2.1); /* Hace la imagen un poco más grande */
+    z-index: 1; /* Asegura que la imagen esté por encima de otras */
 }
+
 
 
 body::before {
@@ -96,7 +111,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://www.chio-lecca.edu.pe/cdn/shop/articles/chio-lecca-blog-estilo-y-moda.jpg?v=1673918894') center/cover no-repeat;
+    background: url('https://www.chio-lecca.edu.pe/cdn/shop/articles/chio-lecca-blog-estilo-y-moda.jpg?v=1673918894') center/contain no-repeat;
     opacity: 0.5; /* Ajusta la opacidad */
     z-index: -1;
 }
