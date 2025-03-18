@@ -6,3 +6,15 @@
 5.- Hemos elegido el tema de nuestra página, en este proyecto vamos a realizar una página web de una tienda de moda.
 6.- Investigamos sobre páginas web de tiendas, fotografías...
 7.- Creamos el html principal y dividimos el trabajo
+8.- Leire, empezo hacer la pagina de productos
+    César la pág principal
+    Lili la pág de login
+9.- Al finalizar el día todos guardamos nuestro trabajo
+
+
+# Día 18/03
+Al empezar todos hicimos pull para descargar los cambios realizados en el html.
+Continuamos con nuestras partes ayudandonos entre nosotros
+Lili finalizo la pagina de login.
+Cesar continua con la pagina principal, arreglando colores del css.
+Leire, estaba haciendo responsive la pág.
