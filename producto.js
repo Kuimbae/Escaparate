@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tipos = document.querySelectorAll('.tipo');
     const contenedorImagenes = document.querySelector('.contenedor-imagenes');
+    const menuHamburguesa = document.createElement("div");
+    const barraLateral = document.querySelector('.barra-lateral');
+
 
     const imagenesPorCategoria = {
         "Jeans": ["pantalon/jeans/jeans1.jpeg", "pantalon/jeans/jeans2.jpeg", "pantalon/jeans/jeans3.jpeg", "pantalon/jeans/jeans4.jpeg", "pantalon/jeans/jeans5.jpeg", "pantalon/jeans/jeans6.jpeg"],
@@ -37,5 +40,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const menuHamburguesa = document.querySelector(".menu-hamburguesa");
+    const barraLateral = document.querySelector(".barra-lateral");
+
+    menuHamburguesa.addEventListener("click", () => {
+        barraLateral.classList.toggle("mostrar-menu");
+    });
+
+    // Cerrar el menú si se hace clic fuera de él
+    document.addEventListener("click", (event) => {
+        if (!barraLateral.contains(event.target) && !menuHamburguesa.contains(event.target)) {
+            barraLateral.classList.remove("mostrar-menu");
+        }
+    });
+});
 
 
