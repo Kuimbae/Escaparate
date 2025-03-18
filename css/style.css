@@ -108,6 +108,93 @@ body {
     color: #4a5568;
 }
 
+/* Estilos para el pie de página */
+footer {
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* Estilos de las redes sociales */
+.footer-section .social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-section .social-media li a {
+    color: #726708;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-section .social-media li a:hover {
+    color: #7a660c60;
+}
+/* Estilo para el formulario de suscripción */
+.footer-section.subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-section.subscribe input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.footer-section.subscribe label.subscribe-btn {
+    padding: 10px 20px;
+    background-color:whitesmoke;
+    border: 1px solid #7a660c60;
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.footer-section.subscribe label.subscribe-btn:hover {
+    background-color:#7a660c60;
+}
+
+.success-message {
+    display: none;
+    background-color: #f4f4f4;
+    color: #5f5906;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.5); /* Comienza pequeño */
+    animation: growMessage 1s forwards; /* Aplicamos la animación */
+}
+@keyframes growMessage {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Inicia en tamaño pequeño */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Aumenta al tamaño original */
+    }
+}
+
+/* Mostrar el mensaje cuando el checkbox está marcado */
+.subscription-checkbox:checked + .success-message {
+    display: block;
+}
+
+
 
 
 
@@ -201,7 +288,7 @@ body, html {
 /* Botón de Suscribirse */
 .subscribe-btn {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #0d0d0e;
     border: none;
     border-radius: 5px;
     color: white;
@@ -217,8 +304,7 @@ body, html {
 
 /* Barra de búsqueda */
 .search-container {
-    width: 30%;
-    background: rgba(255, 255, 255, 0.8);
+    width: 30%;    
     padding: 10px;
     border-radius: 30px;
     display: flex;
@@ -227,12 +313,12 @@ body, html {
     margin: 10px auto;
     position: relative;
     height: 60px; 
-    
-    
+        
 }
 
 .search-bar {
     border: none;
+    background: rgba(255, 255, 255, 0.8);
     padding: 10px;
     font-size: 18px;
     outline: none;
@@ -242,11 +328,12 @@ body, html {
 }
 
 .search-btn {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.8);
     border: none;
     font-size: 20px;
     cursor: pointer;
     margin-left: 10px;
+    border-radius: 20px;
     padding: 8px 15px; 
 }
 
