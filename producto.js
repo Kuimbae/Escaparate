@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Cortos": ["vestido/corto/corto1.jpeg", "vestido/corto/corto2.jpeg", "vestido/corto/corto3.jpeg", "vestido/corto/corto4.jpeg", "vestido/corto/corto5.jpeg", "vestido/corto/corto6.jpeg"],
         "Largos": ["vestido/largo/vestidolargo1.jpeg", "vestido/largo/vestidolargo2.jpeg", "vestido/largo/vestidolargo3.jpeg", "vestido/largo/vestidolargo4.jpeg", "vestido/largo/vestidolargo5.jpeg", "vestido/largo/vestidolargo6.jpeg"],
         "Botas": ["zapatos/botas/botas1.jpg", "zapatos/botas/botas2.jpg", "zapatos/botas/botas3.jpg", "zapatos/botas/botas4.jpg", "zapatos/botas/botas5.jpg", "zapatos/botas/botas6.jpg"],
-        "Zapatillas": ["zapatos/zapatillas/zapatos7.jpg", "zapatos/zapatillas/zapatos2.jpg", "zapatos/zapatillas/zapatos3.jpg", "zapatos/zapatillas/zapatos4.jpg", "zapatos/zapatillas/zapatos5.jpg", "zapatos/zapatillas/zapatos9.jpg"]
+        "Zapatillas": ["zapatos/zapatillas/zapatos7.jpg", "zapatos/zapatillas/zapatos2.jpg", "zapatos/zapatillas/zapatos3.jpg", "zapatos/zapatillas/zapatos4.jpg", "zapatos/zapatillas/zapatos5.jpg", "zapatos/zapatillas/zapatos6.jpg"]
     };
 
     tipos.forEach(tipo => {
