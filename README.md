@@ -20,7 +20,10 @@
 - Cesar continua con la página principal, arreglando colores del css.
 - Leire, estaba haciendo responsive la página
 - A las 14:00h nos volvemos a reuinir para ver cómo van nuestros diseños y organizar las tareas del día siguiente.
+
+
 # Día 19/03
-Realizamos un pequeña reunión para comprobar lo que teniamos hecho,
-Decidimos entre todos unos cambios en Login.
-Revisamos nuestro tablero kanban, empezamos con el responsive de pág principal.
+- Realizamos un pequeña reunión para comprobar lo que teniamos hecho.
+- Decidimos entre todos unos cambios en Login.
+- Revisamos nuestro tablero kanban, empezamos con el responsive de pág principal.
+- A las 10:45h tomamos un pequeño descanso.

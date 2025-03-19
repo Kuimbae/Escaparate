@@ -95,21 +95,22 @@ li {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr); /* Asegura que todas las filas tengan la misma altura */
-    min-width: 100%;
+    min-width: 70%; /* Reduce el ancho mínimo del contenedor */
     flex: 1;
     padding: 20px;
-    margin-left: 250px; /* Ajuste para que no quede detrás del menú */
+    margin-left: 500px; /* Ajuste para que no quede detrás del menú */
     gap: 20px;
     transition: margin-left 0.3s ease-in-out;
 }
 
 .contenedor-imagenes img {
-    width: 100%;
+    width: 90%;
     height: 100%; /* Asegura que todas las imágenes ocupen el mismo espacio */
     object-fit: cover; /* Ajusta la imagen para que se adapte al contenedor, recortando si es necesario */
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
+
 .contenedor-imagenes img:hover + .overlay {
     opacity: 1; /* Muestra la superposición al pasar el mouse */
     
@@ -118,7 +119,7 @@ li {
 
 /* Efecto al pasar el mouse */
 .contenedor-imagenes img:hover {
-    transform: scale(2.1); /* Hace la imagen un poco más grande */
+    transform: scale(1.5); /* Hace la imagen un poco más grande */
     z-index: 1; /* Asegura que la imagen esté por encima de otras */
 }
 
