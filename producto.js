@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const tipos = document.querySelectorAll('.tipo');
-    const contenedorImagenes = document.querySelector('.contenedor-imagenes');
-    const menuHamburguesa = document.createElement("div");
-    const barraLateral = document.querySelector('.barra-lateral');
+    const tipos = document.querySelectorAll(".tipo"); // Categorías dentro del menú
+    const contenedorImagenes = document.querySelector(".contenedor-imagenes");
+    const menuHamburguesa = document.querySelector(".menu-hamburguesa");
+    const barraLateral = document.querySelector(".barra-lateral");
 
-
+    // Mapeo de imágenes por categoría
     const imagenesPorCategoria = {
         "Jeans": ["pantalon/jeans/jeans1.jpeg", "pantalon/jeans/jeans2.jpeg", "pantalon/jeans/jeans3.jpeg", "pantalon/jeans/jeans4.jpeg", "pantalon/jeans/jeans5.jpeg", "pantalon/jeans/jeans6.jpeg"],
         "Traje": ["pantalon/traje/traje1.jpeg", "pantalon/traje/traje2.jpeg", "pantalon/traje/traje3.jpeg", "pantalon/traje/traje4.jpeg", "pantalon/traje/traje5.jpeg", "pantalon/traje/traje6.jpeg"],
@@ -14,36 +14,36 @@ document.addEventListener("DOMContentLoaded", () => {
         "Zapatillas": ["zapatos/zapatillas/zapatos7.jpg", "zapatos/zapatillas/zapatos2.jpg", "zapatos/zapatillas/zapatos3.jpg", "zapatos/zapatillas/zapatos4.jpg", "zapatos/zapatillas/zapatos5.jpg", "zapatos/zapatillas/zapatos6.jpg"]
     };
 
+    // Función para cargar imágenes
+    function cargarImagenes(categoria) {
+        contenedorImagenes.innerHTML = ""; // Limpiar las imágenes anteriores
+
+        if (imagenesPorCategoria[categoria]) {
+            imagenesPorCategoria[categoria].forEach(img => {
+                const imagen = document.createElement("img");
+                imagen.src = `img/${img}`;
+                imagen.alt = categoria;
+                imagen.onerror = () => console.error("Error cargando la imagen:", imagen.src);
+                contenedorImagenes.appendChild(imagen);
+            });
+        } else {
+            console.warn("No hay imágenes para la categoría:", categoria);
+        }
+    }
+
+    // Evento al hacer clic en una categoría
     tipos.forEach(tipo => {
-        tipo.addEventListener('click', (event) => {
-            event.preventDefault(); // Previene la acción predeterminada del enlace
+        tipo.addEventListener("click", (event) => {
+            event.preventDefault();
+            const categoria = event.target.textContent.trim();
+            cargarImagenes(categoria);
 
-            const categoria = event.target.textContent.trim(); // Obtén el nombre de la categoría seleccionada
-            contenedorImagenes.innerHTML = ""; // Limpiar las imágenes actuales en el contenedor
-
-            if (imagenesPorCategoria[categoria]) {
-                imagenesPorCategoria[categoria].forEach(img => {
-                    const imagen = document.createElement("img");
-                    console.log("Cargando imagen:", `img/${img}`);
-                    imagen.src = `img/${img}`; // Asegúrate de que la ruta sea correcta
-
-                    imagen.alt = categoria;
-                    imagen.onerror = function() {
-                        console.error("Error cargando la imagen:", this.src);
-                    };
-                    contenedorImagenes.appendChild(imagen);
-                });
-            } else {
-                console.warn("No hay imágenes para la categoría:", categoria);
-            }
+            // Cierra el menú hamburguesa en dispositivos móviles
+            barraLateral.classList.remove("mostrar-menu");
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-    const menuHamburguesa = document.querySelector(".menu-hamburguesa");
-    const barraLateral = document.querySelector(".barra-lateral");
-
+    // --- MENÚ HAMBURGUESA ---
     menuHamburguesa.addEventListener("click", () => {
         barraLateral.classList.toggle("mostrar-menu");
     });
@@ -55,5 +55,3 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
-
