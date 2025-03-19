@@ -34,9 +34,7 @@ header{
     width: 170%;
     background-color: #ca2f2f;
 }
-
 h1 {
-  
     color: black;
     font-size: 50px;
     margin-top: auto;
@@ -44,6 +42,21 @@ h1 {
     background-color: #ffffff;
     padding: 10px;
     border-radius: 5px;
+}
+
+/* --- ESTILO RESPONSIVO PARA H1 --- */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+        padding: 2px;
+    }
 }
 
 
