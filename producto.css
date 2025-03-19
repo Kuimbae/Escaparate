@@ -1,6 +1,5 @@
 /* Estilo para el menú desplegable */
 
-
 .menu {
     text-decoration: none;
     color: #1f1717;
@@ -97,32 +96,25 @@ li {
 
 /* Contenedor de imágenes */
 .contenedor-imagenes {
-    display: grid;         /* Activa el diseño flexible */
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
-    justify-content: center; /* Centra las imágenes horizontalmente */
-    gap: 100px;            /* Espacio entre imágenes */
-    padding: 2px;        /* Espaciado alrededor */
-    margin: 0 auto;       /* Centra el contenedor */
-    position: fixed;      /* Fija el contenedor en la pantalla */
-    top: 50%;             /* Centra verticalmente */
-    left: 50%;            /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta la posición para centrar */
-    z-index: 0;        /* Asegura que el contenedor esté por debajo del fondo */
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px; /* Ajuste para que no quede detrás del menú */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    transition: margin-left 0.3s ease-in-out;
 }
 
 .contenedor-imagenes img {
-    width: 150%;       /* Ancho al 100% del contenedor */
-    height: 150px;    /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 2px 2px 10px rgba(204, 21, 21, 0.2); /* Sombra ligera */
-    transition: transform 0.3s ease-in-out; /* Efecto al pasar el mouse */
-    position: relative; /* Posiciona el contenedor de la imagen */
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     
 }
   
     
-
 .contenedor-imagenes img:hover + .overlay {
     opacity: 1; /* Muestra la superposición al pasar el mouse */
     
@@ -169,10 +161,14 @@ body{
     transition: transform 0.3s ease-in-out;
 }
 
-/* --- OCULTAR MENÚ EN MÓVILES AL INICIO --- */
+/* --- OCULTAR MENÚ EN MÓVIL --- */
 @media screen and (max-width: 768px) {
     .menu-hamburguesa {
         display: block; /* Mostrar botón en móviles */
+        color: white;
+        background: #333;
+        padding: 10px;
+        border-radius: 5px;
     }
 
     .barra-lateral {
