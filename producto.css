@@ -45,20 +45,6 @@ h1 {
     border-radius: 5px;
 }
 
-/* --- ESTILO RESPONSIVO PARA H1 --- */
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 30px;
-        padding: 0px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 30px;
-        padding: 0px;
-    }
-}
 
 
 /* --- ESTILOS PARA EL MENÚ HAMBURGUESA --- */
@@ -197,16 +183,24 @@ body {
         background: #333;
         padding: 10px;
         border-radius: 5px;
+        width: 30px; /* Hacer el botón más estrecho */
+        height: 30px;
+        text-align: center; /* Centrar el icono */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
     }
 
     .barra-lateral {
         transform: translateX(-100%);
         /* Ocultar el menú */
         position: absolute;
+        width: 150px;
     }
 
     .contenedor-imagenes {
-        margin-left: 0; /* Asegura que las imágenes ocupen toda la pantalla en móviles */
+        margin-left: 35%; /* Asegura que las imágenes ocupen toda la pantalla en móviles */
         grid-template-columns: repeat(2, 1fr); /* Cambia el diseño si es necesario */
     }
 
@@ -223,5 +217,21 @@ body {
     .mostrar-menu {
         transform: translateX(0) !important;
         /* Muestra el menú */
+    }
+}
+
+/* ESTILO RESPONSIVO PARA H1 */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+        background-color: #ffffff;
+        }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 40px;
+        background-color: #ffffff;
+       
     }
 }
