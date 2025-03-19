@@ -1,0 +1,83 @@
+/* Estilos para el pie de página */
+footer {
+    background: rgba(44, 32, 32, 0.7);
+    padding: 10px 0;
+    text-align: center;
+}
+/* Estilos de las redes sociales */
+.footer-section .social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-section .social-media li a {
+    color: rgb(255, 254, 253);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-section .social-media li a:hover {
+    color: #ffd10560;
+}
+/* Estilo para el formulario de suscripción */
+.footer-section.subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-section.subscribe input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.footer-section.subscribe label.subscribe-btn {
+    padding: 10px 20px;
+    background-color: #ff6600;
+    border: 1px solid #7a660c60;
+    color: black;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.footer-section.subscribe label.subscribe-btn:hover {
+    background-color: #d94e00;
+}
+
+/* Estilo para el mensaje de éxito */
+.success-message {
+    display: none;
+    background-color: #f4f4f4;
+    color: #5f5906;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.5); /* Comienza pequeño */
+    animation: growMessage 1s forwards; /* Aplicamos la animación */
+}
+@keyframes growMessage {
+    0% {
+        opacity: 0;
+        transform: scale(0.5); /* Inicia en tamaño pequeño */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Aumenta al tamaño original */
+    }
+}
+
+/* Mostrar el mensaje cuando el checkbox está marcado */
+.subscription-checkbox:checked + .success-message {
+    display: block;
+}
+
