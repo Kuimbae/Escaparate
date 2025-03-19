@@ -7,7 +7,8 @@
 }
 
 /* Fondo de pantalla completo */
-body, html {
+body,
+html {
     height: 100%;
     overflow-x: hidden;
 }
@@ -68,7 +69,7 @@ h1 {
     display: flex;
     gap: 10px;
     padding: 10px;
-    
+
 }
 
 .menu ul li a {
@@ -195,69 +196,72 @@ footer {
 .footer-section .social-media li a:hover {
     color: #ffd10560;
 
-    /* Estilo para el mensaje de éxito */
-    .success-message {
-        display: none;
-        background-color: #f4f4f4;
-        color: #5f5906;
-        margin-top: 10px;
-        font-size: 20px;
-        font-weight: bold;
+}
+
+.success-message {
+    display: none;
+    background-color: #f4f4f4;
+    color: #5f5906;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.5);
+    /* Comienza pequeño */
+    animation: growMessage 1s forwards;
+    /* Aplicamos la animación */
+}
+
+@keyframes growMessage {
+    0% {
         opacity: 0;
         transform: scale(0.5);
-        /* Comienza pequeño */
-        animation: growMessage 1s forwards;
-        /* Aplicamos la animación */
+        /* Inicia en tamaño pequeño */
     }
 
-    @keyframes growMessage {
-        0% {
-            opacity: 0;
-            transform: scale(0.5);
-            /* Inicia en tamaño pequeño */
-        }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        /* Aumenta al tamaño original */
+    }
+}
 
-        100% {
-            opacity: 1;
-            transform: scale(1);
-            /* Aumenta al tamaño original */
-        }
+/* Mostrar el mensaje cuando el checkbox está marcado */
+.subscription-checkbox:checked+.success-message {
+    display: block;
+}
+
+
+
+/* Estilos Responsivos */
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgba(44, 32, 32, 0.9);
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 1000;
     }
 
-    /* Mostrar el mensaje cuando el checkbox está marcado */
-    .subscription-checkbox:checked+.success-message {
+    .menu.active {
+        display: flex;
+        /* Muestra el menú cuando está activo */
+    }
+
+    .menu-icon {
         display: block;
     }
 
-
-    /* Estilos Responsivos */
-
-    @media (max-width: 768px) {
-        .menu {
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            background-color: rgba(44, 32, 32, 0.9);
-            border-radius: 5px;
-            padding: 10px;
-            z-index: 1000;
-        }
-
-        .menu.active {
-            display: flex; /* Muestra el menú cuando está activo */
-        }
-
-        .menu-icon {
-            display: block;
-        }
-
-        .search-container {
-            flex-direction: column;
-        }
-    
-        .search-bar {
-            width: 90%;
-        }
+    .search-container {
+        flex-direction: column;
     }
+
+    .search-bar {
+        width: 90%;
+    }
+}
