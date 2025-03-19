@@ -13,44 +13,43 @@
 </head>
 
 <body>
-    
+
     <video autoplay loop muted playsinline id="video-fondo">
         <source src="/img/istockphoto-2098653116-640_adpp_is.mp4" type="video/mp4">
     </video>
 
     <!-- Barra de navegación -->
     <header>
-      <h1>INPUT PRO STYLE</h1>
-           
-    </header>
-    <section class="navbar">
-    
-        <!-- Menú hamburguesa -->
-        <section class="menu-icon" id="menu-icon">&#9776;</section>
 
-        <!-- Menú desplegable -->
-        <nav id="menu" class="menu">
-            <ul>
-                <li><a href="portada.html">Inicio</a></li>
-                <li><a href="producto.html">Productos</a></li>
-            </ul>
-        </nav>
+        <section class="navbar">
+            <h1>INPUT PRO STYLE</h1>
+            <!-- Menú hamburguesa -->
+            <section class="menu-icon" id="menu-icon">&#9776;</section>
 
-        <!-- Botón de Suscribirse -->
-        <section class="iniciar-sesion">
-            <button class="subscribe-btn" onclick="location.href='login.html'">Iniciar sesión</button>
+            <!-- Menú desplegable -->
+            <nav id="menu" class="menu">
+                <ul>
+                    <li><a href="portada.html">Inicio</a></li>
+                    <li><a href="producto.html">Productos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botón de Suscribirse -->
+            <section class="iniciar-sesion">
+                <button class="subscribe-btn" onclick="location.href='login.html'">Iniciar sesión</button>
+            </section>
+
         </section>
+    </header>
+    <!-- Sección principal con fondo completo -->
+
+    <section class="search-container">
+        <input type="text" placeholder="Buscar..." class="search-bar">
+        <button class="search-btn" onclick="buscarProductos()"> <i class="fas fa-search"></i>
+        </button>
 
     </section>
-    <!-- Sección principal con fondo completo -->
-    
-        <section class="search-container">
-            <input type="text" placeholder="Buscar..." class="search-bar">
-            <button class="search-btn" onclick="buscarProductos()"> <i class="fas fa-search"></i>
-                </button>
 
-        </section>
-    
     <footer>
         <section class="footer-section subscribe">
             <form class="subscribe-form">

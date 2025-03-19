@@ -33,7 +33,7 @@ body::before {
 
 /* Estilo del encabezado */
 header {
-    background-color: white;
+    background: rgba(44, 32, 32, 0.7);
     text-align: center;
     padding: 20px 0;
     margin-bottom: 30px; /* Espacio entre el header y el contenedor de login */
@@ -56,26 +56,27 @@ header {
 
 h1 {
     font-size: 50px;
-    color: BLACK;
+    color: rgb(255, 255, 255);
 }
 
 main {
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: left;
+    flex: 1; /* Esto hace que el main ocupe el espacio restante */
     padding: 20px;
-    margin-bottom: auto;
 }
 
+/* Estilos del formulario de login */
 .login-container {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(223, 114, 114, 0.1);
     padding: 30px;
     width: 100%;
-    max-width: 50%;
+    max-width: 400px;
 }
-
 
 /* Estilo del título dentro del formulario */
 h2 {
@@ -141,7 +142,7 @@ button.btn:hover {
 
 /* Estilos para el pie de página */
 footer {
-    background-color: white;
+    background: rgba(44, 32, 32, 0.7);
     padding: 10px 0;
     text-align: center;
 }
@@ -154,13 +155,13 @@ footer {
 }
 
 .footer-section .social-media li a {
-    color: #726708;
+    color: rgb(255, 254, 253);
     font-size: 20px;
     text-decoration: none;
 }
 
 .footer-section .social-media li a:hover {
-    color: #7a660c60;
+    color: #ffd10560;
 }
 /* Estilo para el formulario de suscripción */
 .footer-section.subscribe form {
@@ -181,7 +182,7 @@ footer {
 
 .footer-section.subscribe label.subscribe-btn {
     padding: 10px 20px;
-    background-color:whitesmoke;
+    background-color: #ff6600;
     border: 1px solid #7a660c60;
     color: black;
     border-radius: 4px;
@@ -191,7 +192,7 @@ footer {
 }
 
 .footer-section.subscribe label.subscribe-btn:hover {
-    background-color:#7a660c60;
+    background-color: #d94e00;
 }
 
 /* Estilo para el mensaje de éxito */
