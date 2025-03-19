@@ -60,22 +60,22 @@ h1 {
 }
 
 main {
+    width: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex: 1; /* Esto hace que el main ocupe el espacio restante */
     padding: 20px;
+    margin-bottom: auto;
 }
 
-/* Estilos del formulario de login */
 .login-container {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(223, 114, 114, 0.1);
     padding: 30px;
     width: 100%;
-    max-width: 400px;
+    max-width: 50%;
 }
+
 
 /* Estilo del título dentro del formulario */
 h2 {

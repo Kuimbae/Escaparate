@@ -15,8 +15,12 @@
 # Día 18/03
 - Al empezar todos hicimos pull para descargar los cambios realizados en el html.
 - Continuamos con nuestras partes ayudándonos entre nosotros
-- NA las 12:00h nos reunimos para acordar los colores que predominarán en nuestra página y solucionamos algunas dudas.
+- A las 12:00h nos reunimos para acordar los colores que predominarán en nuestra página y solucionamos algunas dudas.
 - Lili finalizó la pagina de login.
 - Cesar continua con la página principal, arreglando colores del css.
 - Leire, estaba haciendo responsive la página
 - A las 14:00h nos volvemos a reuinir para ver cómo van nuestros diseños y organizar las tareas del día siguiente.
+# Día 19/03
+Realizamos un pequeña reunión para comprobar lo que teniamos hecho,
+Decidimos entre todos unos cambios en Login.
+Revisamos nuestro tablero kanban, empezamos con el responsive de pág principal.
