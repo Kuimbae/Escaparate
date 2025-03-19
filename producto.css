@@ -79,7 +79,6 @@ h1 {
 }
 
 
-
 ul {
     padding: 20px;
     color: #252323;
@@ -121,8 +120,7 @@ li {
     /* Reduce el ancho mínimo del contenedor */
     flex: 1;
     padding: 20px;
-    margin-left: 500px;
-    /* Ajuste para que no quede detrás del menú */
+    margin-left: 500px; /* Alinea las imágenes al lado del menú */
     gap: 20px;
     transition: margin-left 0.3s ease-in-out;
 }
@@ -207,6 +205,12 @@ body {
         position: absolute;
     }
 
+    .contenedor-imagenes {
+        margin-left: 0; /* Asegura que las imágenes ocupen toda la pantalla en móviles */
+        grid-template-columns: repeat(2, 1fr); /* Cambia el diseño si es necesario */
+    }
+
+   
     /* --- MOSTRAR MENÚ AL HACER CLIC (SIN JS) --- */
     .menu-hamburguesa:focus+.barra-lateral,
     .menu-hamburguesa:active+.barra-lateral {

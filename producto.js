@@ -36,7 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
         tipo.addEventListener("click", (event) => {
             event.preventDefault();
             const categoria = event.target.textContent.trim();
+            
+            // Primero, cargar imágenes
             cargarImagenes(categoria);
+
+               // Luego, dar un pequeño tiempo antes de cerrar el menú (solo en móviles)
+        setTimeout(() => {
+            barraLateral.classList.remove("mostrar-menu");
+        }, 200); // Agrega un pequeño retraso para evitar conflictos
 
             // Cierra el menú hamburguesa en dispositivos móviles
             barraLateral.classList.remove("mostrar-menu");
