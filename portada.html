@@ -29,7 +29,7 @@
             <!-- Menú desplegable -->
             <nav id="menu" class="menu">
                 <ul>
-                    <li><a href="portada.html">Inicio</a></li>
+                   
                     <li><a href="producto.html">Productos</a></li>
                 </ul>
             </nav>
@@ -45,8 +45,7 @@
 
     <section class="search-container">
         <input type="text" placeholder="Buscar..." class="search-bar">
-        <button class="search-btn" onclick="buscarProductos()"> <i class="fas fa-search"></i>
-        </button>
+        <button class="search-btn" onclick="redirigirAProductos()"><i class="fas fa-search"></i></button>
 
     </section>
 
@@ -76,6 +75,23 @@
 <script>
     document.getElementById("menu-icon").addEventListener("click", function () {
         document.getElementById("menu").classList.toggle("active");
+    });
+
+    function redirigirAProductos() {
+        let searchTerm = document.querySelector(".search-bar").value.trim(); // Obtener el término de búsqueda
+        if (searchTerm) {
+            window.location.href = `producto.html?search=${encodeURIComponent(searchTerm)}`;
+        } else {
+            window.location.href = "producto.html"; // Si está vacío, solo redirige
+        }
+    }
+
+    // Detectar tecla Enter en el campo de búsqueda
+    document.querySelector(".search-bar").addEventListener("keypress", function (event) {
+        if (event.key === "Enter") { 
+            event.preventDefault(); // Evita el comportamiento predeterminado
+            redirigirAProductos(); // Llama a la función de búsqueda
+        }
     });
 
 
