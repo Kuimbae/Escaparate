@@ -265,3 +265,18 @@ footer {
         width: 90%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+        left: 40%;
+        }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 25px;
+        left: 35%;
+        transform: translateX(-40%);
+    }
+}
