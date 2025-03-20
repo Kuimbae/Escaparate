@@ -46,6 +46,7 @@
     <section class="search-container">
         <input type="text" placeholder="Buscar..." class="search-bar">
         <button class="search-btn" onclick="redirigirAProductos()"><i class="fas fa-search"></i></button>
+        <p id="error-message" style="color: red; display: none;">Por favor, rellene el campo de búsqueda.</p>
 
     </section>
 
@@ -78,13 +79,27 @@
     });
 
     function redirigirAProductos() {
-        let searchTerm = document.querySelector(".search-bar").value.trim(); // Obtener el término de búsqueda
-        if (searchTerm) {
-            window.location.href = `producto.html?search=${encodeURIComponent(searchTerm)}`;
-        } else {
-            window.location.href = "producto.html"; // Si está vacío, solo redirige
-        }
+    let searchTerm = document.querySelector(".search-bar").value.trim(); // Obtener el término de búsqueda//
+    const errorMessage = document.getElementById("error-message");
+
+    if (searchTerm) {
+
+        // Si hay texto en el campo, ocultamos el mensaje de error y redirigimos//
+        errorMessage.style.display = "none";
+        window.location.href = `producto.html?search=${encodeURIComponent(searchTerm)}`;
+    } else {
+        // Si el campo está vacío, mostramos el mensaje de error
+        errorMessage.style.display = "block";
     }
+}
+
+// Ocultar mensaje de error cuando el usuario comience a escribir
+document.querySelector(".search-bar").addEventListener("input", function () {
+    const errorMessage = document.getElementById("error-message");
+    if (this.value.trim() !== "") {
+        errorMessage.style.display = "none"; // Ocultamos el mensaje si el campo tiene texto
+    }
+});
 
     // Detectar tecla Enter en el campo de búsqueda
     document.querySelector(".search-bar").addEventListener("keypress", function (event) {
