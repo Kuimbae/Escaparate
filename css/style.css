@@ -131,7 +131,10 @@ h1 {
     padding: 8px 15px;
 }
 
-
+#error-message{
+    color: rgb(255, 255, 255); 
+    display: none;"
+}
 
 /* Footer */
 footer {
