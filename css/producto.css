@@ -298,6 +298,23 @@ body {
     }
 }
 
+.back-boton {
+    width: 2%;
+   
+    display: inline-block;
+    font-size: 20px;
+    color: BLACK;
+    transition: 0.3s;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    float: left; /* Esto mueve el botón a la derecha */
+}
+
+.back-boton:hover {
+    color: gray; /* Cambia el color al pasar el ratón */
+}
+
+
 //** Footer */
 /*footer {
     background: rgba(0, 0, 0, 0.7);
