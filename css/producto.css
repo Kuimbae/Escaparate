@@ -1,3 +1,53 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Estilo del encabezado */
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribuye los elementos: uno a la izquierda y otro a la derecha */
+    padding: 10px;  
+}
+
+h1 {
+    font-size: 2.5rem; /* Tamaño más grande */
+    font-weight: bold; /* Hace la letra más gruesa */
+    margin-bottom: 15px; /* Espacio entre el h1 y el botón */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    width: 100%;
+}
+
+
+.subscribe-btn {
+    padding: 12px 25px;
+    font-size: 1.2rem10px   ;
+    font-weight: bold;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    min-width: 150px; /* Ajusta según el tamaño del texto */  
+}
+
+.subcribe-btn:hover {
+    background-color: #d94e00;
+}
+
 /* Estilo para el menú desplegable */
 
 .menu {
@@ -29,22 +79,6 @@ li:hover>ul.submenu {
 a.dropdown {
     cursor: pointer;
 }
-
-header {
-    width: 170%;
-    background-color: #ca2f2f;
-}
-
-h1 {
-    color: black;
-    font-size: 50px;
-    margin-top: auto;
-    text-align: center;
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-}
-
 
 
 /* --- ESTILOS PARA EL MENÚ HAMBURGUESA --- */
@@ -102,12 +136,14 @@ li {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     /* Asegura que todas las filas tengan la misma altura */
-    min-width: 70%;
+    min-width: 30%;
     /* Reduce el ancho mínimo del contenedor */
     flex: 1;
-    padding: 20px;
-    margin-left: 500px; /* Alinea las imágenes al lado del menú */
-    gap: 20px;
+    padding: 295px;
+    margin-left: 350px;
+    /* Alinea las imágenes al lado del menú */
+    margin-top: -200px;
+    gap: 10px;
     transition: margin-left 0.3s ease-in-out;
 }
 
@@ -152,18 +188,17 @@ body::before {
 }
 
 body {
-    width: 50%;
-    margin-left: 100PX;
+    height: 100%;
+    overflow-x: hidden;
 }
-
 
 
 
 /* --- BARRA LATERAL RESPONSIVA --- */
 .barra-lateral {
-    width: 200px;
+    width: 170px;
     /* Reduce el ancho de la barra lateral */
-    height: 50%;
+    height: 40%;
     /* Reduce la altura de la barra lateral */
     position: fixed;
     top: 75px;
@@ -183,9 +218,11 @@ body {
         background: #333;
         padding: 10px;
         border-radius: 5px;
-        width: 30px; /* Hacer el botón más estrecho */
+        width: 30px;
+        /* Hacer el botón más estrecho */
         height: 30px;
-        text-align: center; /* Centrar el icono */
+        text-align: center;
+        /* Centrar el icono */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -200,11 +237,13 @@ body {
     }
 
     .contenedor-imagenes {
-        margin-left: 35%; /* Asegura que las imágenes ocupen toda la pantalla en móviles */
-        grid-template-columns: repeat(2, 1fr); /* Cambia el diseño si es necesario */
+        margin-left: 35%;
+        /* Asegura que las imágenes ocupen toda la pantalla en móviles */
+        grid-template-columns: repeat(2, 1fr);
+        /* Cambia el diseño si es necesario */
     }
 
-   
+
     /* --- MOSTRAR MENÚ AL HACER CLIC (SIN JS) --- */
     .menu-hamburguesa:focus+.barra-lateral,
     .menu-hamburguesa:active+.barra-lateral {
@@ -223,15 +262,131 @@ body {
 /* ESTILO RESPONSIVO PARA H1 */
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 40px;
-        background-color: #ffffff;
-        }
+        font-size: 20px;
+        
+    }
 }
 
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 40px;
-        background-color: #ffffff;
-       
+        font-size: 20px;
+    
+
     }
 }
+
+/* BOTÓN INICIO SESIÓN RESPONSIVO */
+@media screen and (max-width: 768px) {
+    .subscribe-btn {
+        display: none;
+        /* Oculta el botón */
+    }
+}
+
+//** Footer */
+/*footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 5px 0; /* Reduce la altura del footer ajustando el padding vertical 
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-section .social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-section .social-media li {
+    margin-top: 10px;}
+    /* Espaciado entre los elementos de la lista */
+
+
+/*.footer-section .social-media li a {
+    color: rgb(255, 254, 253);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.footer-section.subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 5px;
+}
+
+.footer-section.subscribe input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 250px;
+    margin-top: 30px;
+
+}
+
+.footer-section.subscribe label.subscribe-btn {
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px 15px;
+    text-align: center;
+    display: inline-block;
+}
+
+.footer-section.subscribe label.subscribe-btn:hover {
+    background-color: #d94e00;
+    
+}
+
+
+.footer-section .social-media li a:hover {
+    color: #ffd10560;
+
+}
+
+.success-message {
+    display: none;
+    background-color: #f4f4f4;
+    color: #5f5906;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.5);
+    /* Comienza pequeño */
+    animation: growMessage 1s forwards;
+    /* Aplicamos la animación */
+}
+
+@keyframes growMessage {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        /* Inicia en tamaño pequeño */
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        /* Aumenta al tamaño original */
+    }
+}*/
+
+/* Mostrar el mensaje cuando el checkbox está marcado 
+.subscription-checkbox:checked+.success-message {
+    display: block;
+}*/
+
+
+
+
+ 
