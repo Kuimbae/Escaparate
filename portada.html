@@ -79,12 +79,11 @@
     });
 
     function redirigirAProductos() {
-    let searchTerm = document.querySelector(".search-bar").value.trim(); // Obtener el término de búsqueda//
+    let searchTerm = document.querySelector(".search-bar").value.trim(); // Obtener el término de búsqueda
     const errorMessage = document.getElementById("error-message");
 
     if (searchTerm) {
-
-        // Si hay texto en el campo, ocultamos el mensaje de error y redirigimos//
+        // Si hay texto en el campo, ocultamos el mensaje de error y redirigimos
         errorMessage.style.display = "none";
         window.location.href = `producto.html?search=${encodeURIComponent(searchTerm)}`;
     } else {
@@ -92,6 +91,14 @@
         errorMessage.style.display = "block";
     }
 }
+
+// Detectar tecla Enter en el campo de búsqueda
+document.querySelector(".search-bar").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") { 
+        event.preventDefault(); // Evita el comportamiento predeterminado
+        redirigirAProductos(); // Llama a la función de búsqueda
+    }
+});
 
 // Ocultar mensaje de error cuando el usuario comience a escribir
 document.querySelector(".search-bar").addEventListener("input", function () {
@@ -101,13 +108,11 @@ document.querySelector(".search-bar").addEventListener("input", function () {
     }
 });
 
-    // Detectar tecla Enter en el campo de búsqueda
-    document.querySelector(".search-bar").addEventListener("keypress", function (event) {
-        if (event.key === "Enter") { 
-            event.preventDefault(); // Evita el comportamiento predeterminado
-            redirigirAProductos(); // Llama a la función de búsqueda
-        }
-    });
+// Ocultar mensaje de error cuando el usuario haga clic en el campo de búsqueda
+document.querySelector(".search-bar").addEventListener("click", function () {
+    const errorMessage = document.getElementById("error-message");
+    errorMessage.style.display = "none"; // Ocultamos el mensaje al hacer clic en el campo
+});
 
 
 </script>
