@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/cesta.css">
+
     <title>Cesta de Compra</title>
+
 </head>
+
 <body>
     <h1>Cesta de la compra</h1>
     <div id="carrito-contenedor"></div>
     <h2 id="total"></h2>
 
-   </body>
-   <script src="js/cesta.js "></script>
+    <a href="producto.html" class="back-boton">
+        <i class="fas fa-arrow-left"></i>Seguir comprando</a>
+    <button id="vaciar-carrito" class="vaciar-carrito">Vaciar carrito</button>
+    <button id="realizar-pedido" class="realizar-pedido">Realizar pedido</button>
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <h3>¡Gracias por tu compra!</h3>
+            <p>En breve recibirás un correo con los detalles de tu pedido.</p>
+        </div>
+    </div>
+</body>
+
+<script src="js/cesta.js "></script>
+
 </html>

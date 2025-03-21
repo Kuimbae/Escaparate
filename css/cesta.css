@@ -25,15 +25,16 @@ h1 {
 
 /* Contenedor de los productos del carrito */
 #carrito-contenedor {
-    width: 80%;
+    width: 70%;
     max-width: 1200px;
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 11px;
+    padding: 5px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
 }
+
 #total {
     font-size: 2em;
     color: #333;
@@ -48,7 +49,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 7px;
     border-bottom: 1px solid #ddd;
 }
 
@@ -83,7 +84,7 @@ h1 {
 
 /* Añadir espacio entre productos */
 .producto:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 3px;
 }
 
 /* Botón de vaciar carrito */
@@ -124,4 +125,22 @@ footer {
 
 .producto button:hover {
     background-color: #2980b9;
+}
+.back-boton {
+    width: 10%; /* Aumenta el ancho del botón */
+    display: inline-block;
+    font-size: 18px; /* Aumenta el tamaño de la fuente */
+    color: rgb(204, 24, 24);
+    background-color: white;
+    transition: 0.3s;
+    border: 2px solid #cf1c1c;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    margin-left: 30px; /* Ajusta según sea necesario */
+    padding: 10px 20px; /* Aumenta el relleno para hacer el botón más grande */
+}
+
+.back-boton:hover {
+    color: gray; /* Cambia el color al pasar el ratón */
 }
