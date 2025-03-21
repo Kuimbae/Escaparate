@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contenedorImagenes = document.querySelector(".contenedor-imagenes");
     const menuHamburguesa = document.querySelector(".menu-hamburguesa");
     const barraLateral = document.querySelector(".barra-lateral");
+    const carritoContador = document.querySelector(".carrito-contador"); // Contenedor para mostrar el número de artículos en el carrito
 
     let imagenesPorCategoria = {}; // Objeto para almacenar los datos del JSON
 
@@ -15,121 +16,137 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error al cargar el JSON:", error));
 
     // Función para cargar productos con imágenes, precios y descripciones
-function cargarProductos(categoria) {
-    contenedorImagenes.innerHTML = ""; // Limpiar los productos anteriores
+    function cargarProductos(categoria) {
+        contenedorImagenes.innerHTML = ""; // Limpiar los productos anteriores
 
-    if (imagenesPorCategoria[categoria]) {
-        imagenesPorCategoria[categoria].forEach(producto => {
-            // Crear un contenedor para cada producto
-            const productoDiv = document.createElement("div");
-            productoDiv.classList.add("producto");
+        if (imagenesPorCategoria[categoria]) {
+            imagenesPorCategoria[categoria].forEach(producto => {
+                // Crear un contenedor para cada producto
+                const productoDiv = document.createElement("div");
+                productoDiv.classList.add("producto");
 
-            // Contenedor para la imagen
-            const imagenDiv = document.createElement("div");
-            imagenDiv.classList.add("imagen");
-            const imagen = document.createElement("img");
-            imagen.src = `img/${producto.imagen}`;
-            imagen.alt = producto.nombre;
-            imagen.onerror = () => console.error("Error cargando la imagen:", imagen.src);
-            imagenDiv.appendChild(imagen);
-            productoDiv.appendChild(imagenDiv);
+                // Contenedor para la imagen
+                const imagenDiv = document.createElement("div");
+                imagenDiv.classList.add("imagen");
+                const imagen = document.createElement("img");
+                imagen.src = `img/${producto.imagen}`;
+                imagen.alt = producto.nombre;
+                imagen.onerror = () => console.error("Error cargando la imagen:", imagen.src);
+                imagenDiv.appendChild(imagen);
+                productoDiv.appendChild(imagenDiv);
 
-            // Contenedor para los detalles (precio, descripción, etc.)
-            const detallesDiv = document.createElement("div");
-            detallesDiv.classList.add("detalles");
+                // Contenedor para los detalles (precio, descripción, etc.)
+                const detallesDiv = document.createElement("div");
+                detallesDiv.classList.add("detalles");
 
-            // Nombre del producto
-            const nombre = document.createElement("h3");
-            nombre.textContent = producto.nombre;
-            detallesDiv.appendChild(nombre);
+                // Nombre del producto
+                const nombre = document.createElement("h3");
+                nombre.textContent = producto.nombre;
+                detallesDiv.appendChild(nombre);
 
-            // Precio del producto
-            const precio = document.createElement("p");
-            precio.textContent = `Precio: $${producto.precio}`;
-            detallesDiv.appendChild(precio);
+                // Precio del producto
+                const precio = document.createElement("p");
+                precio.textContent = `Precio: $${producto.precio}`;
+                detallesDiv.appendChild(precio);
 
-            // Descripción del producto
-            const descripcion = document.createElement("p");
-            descripcion.textContent = producto.descripcion;
-            detallesDiv.appendChild(descripcion);
+                // Descripción del producto
+                const descripcion = document.createElement("p");
+                descripcion.textContent = producto.descripcion;
+                detallesDiv.appendChild(descripcion);
 
-            // Aquí comienza el código adicional para la cantidad de productos
-            // Contenedor para la cantidad de productos
-            const cantidadDiv = document.createElement("div");
-            cantidadDiv.classList.add("cantidad");
+                // Contenedor para la cantidad de productos
+                const cantidadDiv = document.createElement("div");
+                cantidadDiv.classList.add("cantidad");
 
-            // Botón para disminuir cantidad
-            const botonMenos = document.createElement("button");
-            botonMenos.textContent = "-";
-            botonMenos.onclick = () => {
-                let cantidadInput = cantidadInputField.value;
-                if (cantidadInput > 1) {
-                    cantidadInput--;
+                // Botón para disminuir cantidad
+                const botonMenos = document.createElement("button");
+                botonMenos.textContent = "-";
+                botonMenos.onclick = () => {
+                    let cantidadInput = cantidadInputField.value;
+                    if (cantidadInput > 1) {
+                        cantidadInput--;
+                        cantidadInputField.value = cantidadInput;
+                    }
+                };
+                cantidadDiv.appendChild(botonMenos);
+
+                // Campo de entrada para la cantidad
+                const cantidadInputField = document.createElement("input");
+                cantidadInputField.type = "number";
+                cantidadInputField.value = 1;  // Valor inicial
+                cantidadInputField.min = 1;    // No puede ser menos que 1
+                cantidadInputField.max = 99;   // Valor máximo de cantidad
+                cantidadInputField.setAttribute("readonly", true);  // Solo lectura para evitar cambios directos
+                cantidadDiv.appendChild(cantidadInputField);
+
+                // Botón para aumentar cantidad
+                const botonMas = document.createElement("button");
+                botonMas.textContent = "+";
+                botonMas.onclick = () => {
+                    let cantidadInput = cantidadInputField.value;
+                    cantidadInput++;
                     cantidadInputField.value = cantidadInput;
-                }
-            };
-            cantidadDiv.appendChild(botonMenos);
+                };
+                cantidadDiv.appendChild(botonMas);
 
-            // Campo de entrada para la cantidad
-            const cantidadInputField = document.createElement("input");
-            cantidadInputField.type = "number";
-            cantidadInputField.value = 1;  // Valor inicial
-            cantidadInputField.min = 1;    // No puede ser menos que 1
-            cantidadInputField.max = 99;   // Valor máximo de cantidad
-            cantidadInputField.setAttribute("readonly", true);  // Solo lectura para evitar cambios directos
-            cantidadDiv.appendChild(cantidadInputField);
+                detallesDiv.appendChild(cantidadDiv);
 
-            // Botón para aumentar cantidad
-            const botonMas = document.createElement("button");
-            botonMas.textContent = "+";
-            botonMas.onclick = () => {
-                let cantidadInput = cantidadInputField.value;
-                cantidadInput++;
-                cantidadInputField.value = cantidadInput;
-            };
-            cantidadDiv.appendChild(botonMas);
+                // Botón de añadir al carrito
+                const boton = document.createElement("button");
+                boton.textContent = "Añadir al carrito";
+                boton.onclick = () => {
+                    const cantidad = cantidadInputField.value;
+                    console.log(`Producto añadido al carrito: ${producto.nombre} x${cantidad}`);
 
-            detallesDiv.appendChild(cantidadDiv);
-            // Aquí termina el código adicional para la cantidad de productos
+                    // Crear un objeto del producto con la cantidad seleccionada
+                    const productoCarrito = {
+                        nombre: producto.nombre,
+                        imagen: producto.imagen,
+                        precio: producto.precio,
+                        cantidad: cantidad
+                    };
 
-            // Botón de añadir al carrito
-const boton = document.createElement("button");
-boton.textContent = "Añadir al carrito";
-boton.onclick = () => {
-    const cantidad = cantidadInputField.value;
-    console.log(`Producto añadido al carrito: ${producto.nombre} x${cantidad}`);
+                    // Obtener el carrito actual del localStorage, o un array vacío si no existe
+                    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-    // Crear un objeto del producto con la cantidad seleccionada
-    const productoCarrito = {
-        nombre: producto.nombre,
-        imagen: producto.imagen,
-        precio: producto.precio,
-        cantidad: cantidad
-    };
+                    // Añadir el nuevo producto al carrito
+                    carrito.push(productoCarrito);
 
-    // Obtener el carrito actual del localStorage, o un array vacío si no existe
-    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+                    // Guardar el carrito actualizado en localStorage
+                    localStorage.setItem("carrito", JSON.stringify(carrito));
 
-    // Añadir el nuevo producto al carrito
-    carrito.push(productoCarrito);
+                    // Actualizar el contador del carrito
+                    actualizarContadorCarrito();
+                };
+                detallesDiv.appendChild(boton);
 
-    // Guardar el carrito actualizado en localStorage
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-};
-detallesDiv.appendChild(boton);
+                // Añadir el contenedor de detalles al producto
+                productoDiv.appendChild(detallesDiv);
 
-
-            // Añadir el contenedor de detalles al producto
-            productoDiv.appendChild(detallesDiv);
-
-            // Añadir el producto al contenedor principal
-            contenedorImagenes.appendChild(productoDiv);
-        });
-    } else {
-        console.warn("No hay productos para la categoría:", categoria);
+                // Añadir el producto al contenedor principal
+                contenedorImagenes.appendChild(productoDiv);
+            });
+        } else {
+            console.warn("No hay productos para la categoría:", categoria);
+        }
     }
-}
 
+    // Función para actualizar el contador de artículos en el carrito
+    function actualizarContadorCarrito() {
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        let totalArticulos = 0;
+
+        // Sumar todas las cantidades de los productos en el carrito
+        carrito.forEach(producto => {
+            totalArticulos += parseInt(producto.cantidad);
+        });
+
+        // Actualizar el número de artículos en el carrito
+        carritoContador.textContent = totalArticulos;
+    }
+
+    // Llamar a la función para mostrar el número de artículos al cargar la página
+    actualizarContadorCarrito();
 
     // Evento al hacer clic en una categoría
     tipos.forEach(tipo => {
@@ -158,4 +175,5 @@ detallesDiv.appendChild(boton);
             barraLateral.classList.remove("mostrar-menu");
         }
     });
+
 });
