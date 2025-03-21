@@ -7,62 +7,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Escaparate Input Pro Style</title>
     <link rel="stylesheet" href="css/producto.css">
+    <!-- Botón de atras -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script defer src="js/producto.js"></script>
 </head>
 
 <body>
+    <header>
+        <h1>INPUT PRO STYLE</h1>
+        <button class="subscribe-btn" onclick="location.href='login.html'">Iniciar sesión</button>
+        <a href="portada.html" class="back-boton">
+            <i class="fas fa-arrow-left"></i> </a>
+    </header>
 
-      
+    <!-- Botón Menú Hamburguesa -->
+    <div class="menu-hamburguesa">☰</div>
 
-        <header>
-                <h1>INPUT PRO STYLE</h1>    
-                <button class="subscribe-btn" onclick="location.href='login.html'">Iniciar sesión</button>
-                <a href="portada.html" class="back-boton">
-                    <i class="fas fa-arrow-left"></i> </a>
-        </header>
-    
-        <!-- Botón Menú Hamburguesa -->
-        <div class="menu-hamburguesa">☰</div>
-      
     <main>
-         <!-- Contenedor donde se mostrarán las imágenes -->
+        <!-- Contenedor donde se mostrarán las imágenes -->
         <div class="contenedor-imagenes"></div>
 
-    <!-- Barra Lateral -->
-    <section class="barra-lateral">
-      
-    <ul style="list-style-type: none;">
-       
-        <li>
-        <a href="#" class="menu">VESTIDOS</a>
-        <ul class="submenu" style="list-style-type: none;">
-            <li><a href="#" class="tipo">Cortos</a></li>
-            <li><a href="#" class="tipo">Largos</a></li>
-        </ul>
-        </li>
+        <!-- Barra Lateral -->
+        <section class="barra-lateral">
 
-        <li>
-        <a href="#" class="menu">PANTALONES</a>
-        <ul class="submenu" style="list-style-type: none;">
-            <li><a href="#" class="tipo">Jeans</a></li>
-            <li><a href="#" class="tipo">Traje</a></li>
-        </ul>
-        </li>
+            <ul style="list-style-type: none;">
 
-        <li>
-        <a href="#" class="menu">CALZADO</a>
-        <ul class="submenu" style="list-style-type: none;">
-            <li><a href="#" class="tipo">Botas</a></li>
-            <li><a href="#" class="tipo">Zapatillas</a></li>
-        </ul>
-        </li>
-    </ul>
+                <li>
+                    <a href="#" class="menu">VESTIDOS</a>
+                    <ul class="submenu" style="list-style-type: none;">
+                        <li><a href="#" class="tipo">Cortos</a></li>
+                        <li><a href="#" class="tipo">Largos</a></li>
+                    </ul>
+                </li>
 
-   
-</main> 
-<script src="producto.js"></script>
-<!--<footer>
+                <li>
+                    <a href="#" class="menu">PANTALONES</a>
+                    <ul class="submenu" style="list-style-type: none;">
+                        <li><a href="#" class="tipo">Jeans</a></li>
+                        <li><a href="#" class="tipo">Traje</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="menu">CALZADO</a>
+                    <ul class="submenu" style="list-style-type: none;">
+                        <li><a href="#" class="tipo">Botas</a></li>
+                        <li><a href="#" class="tipo">Zapatillas</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+    </main>
+    <script src="json/imagenes.json"></script>
+    <script src="js/producto.js"></script>
+    <!--<footer>
     <section class="footer-section subscribe">
         <form class="subscribe-form">
             <input type="email" id="email" placeholder="Ingresa tu correo" required />

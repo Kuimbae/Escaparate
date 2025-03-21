@@ -1,0 +1,392 @@
+{
+    "Jeans": [
+        {
+            "id": 1,
+            "nombre": "Jeans Azul Clásico",
+            "imagen": "pantalon/jeans/jeans1.jpeg",
+            "precio": "25.99",
+            "descripcion": "Jeans azul clásico de corte recto"
+        },
+        {
+            "id": 2,
+            "nombre": "Jeans Ajustados",
+            "imagen": "pantalon/jeans/jeans2.jpeg",
+            "precio": "27.50",
+            "descripcion": "Jeans ajustados con detalles rasgados"
+        },
+        {
+            "id": 3,
+            "nombre": "Jeans Vintage",
+            "imagen": "pantalon/jeans/jeans3.jpeg",
+            "precio": "30.00",
+            "descripcion": "Jeans holgados estilo vintage"
+        },
+        {
+            "id": 4,
+            "nombre": "Jeans Con Dobladillo",
+            "imagen": "pantalon/jeans/jeans4.jpeg",
+            "precio": "28.90",
+            "descripcion": "Jeans de mezclilla con dobladillo"
+        },
+        {
+            "id": 5,
+            "nombre": "Jeans Desgastados",
+            "imagen": "pantalon/jeans/jeans5.jpeg",
+            "precio": "32.99",
+            "descripcion": "Jeans negros con efecto desgastado"
+        },
+        {
+            "id": 6,
+            "nombre": "Jeans Skinny",
+            "imagen": "pantalon/jeans/jeans6.jpeg",
+            "precio": "29.99",
+            "descripcion": "Jeans skinny con cintura alta"
+        },
+        {
+            "id": 7,
+            "nombre": "Jeans Boyfriend",
+            "imagen": "pantalon/jeans/jeans7.jpeg",
+            "precio": "26.99",
+            "descripcion": "Jeans estilo boyfriend con bolsillos"
+        },
+        {
+            "id": 8,
+            "nombre": "Jeans Oscuros",
+            "imagen": "pantalon/jeans/jeans8.jpeg",
+            "precio": "31.50",
+            "descripcion": "Jeans azul oscuro con costuras visibles"
+        },
+        {
+            "id": 9,
+            "nombre": "Jeans Push-Up",
+            "imagen": "pantalon/jeans/jeans9.jpeg",
+            "precio": "34.00",
+            "descripcion": "Jeans ajustados con efecto push-up"
+        }
+    ],
+    "Traje": [
+        {
+            "id": 1,
+            "nombre": "Traje Gris Oficina",
+            "imagen": "pantalon/traje/traje1.jpeg",
+            "precio": "89.99",
+            "descripcion": "Traje elegante gris para oficina"
+        },
+        {
+            "id": 2,
+            "nombre": "Traje Negro Clásico",
+            "imagen": "pantalon/traje/traje2.jpeg",
+            "precio": "95.00",
+            "descripcion": "Traje negro clásico con chaqueta"
+        },
+        {
+            "id": 3,
+            "nombre": "Traje Slim Azul Marino",
+            "imagen": "pantalon/traje/traje3.jpeg",
+            "precio": "120.50",
+            "descripcion": "Traje azul marino de corte slim"
+        },
+        {
+            "id": 4,
+            "nombre": "Traje Beige Formal",
+            "imagen": "pantalon/traje/traje4.jpeg",
+            "precio": "110.00",
+            "descripcion": "Traje beige ideal para eventos formales"
+        },
+        {
+            "id": 5,
+            "nombre": "Traje Con Chaleco",
+            "imagen": "pantalon/traje/traje5.jpeg",
+            "precio": "99.99",
+            "descripcion": "Traje con chaleco incluido"
+        },
+        {
+            "id": 6,
+            "nombre": "Traje Elegante Satén",
+            "imagen": "pantalon/traje/traje6.jpeg",
+            "precio": "85.50",
+            "descripcion": "Traje elegante con solapas de satén"
+        },
+        {
+            "id": 7,
+            "nombre": "Traje Moderno Ajustado",
+            "imagen": "pantalon/traje/traje7.jpeg",
+            "precio": "98.99",
+            "descripcion": "Traje moderno con pantalón ajustado"
+        },
+        {
+            "id": 8,
+            "nombre": "Traje Formal Con Corbata",
+            "imagen": "pantalon/traje/traje8.jpeg",
+            "precio": "105.00",
+            "descripcion": "Traje formal con corbata a juego"
+        },
+        {
+            "id": 9,
+            "nombre": "Traje Azul Botones Dorados",
+            "imagen": "pantalon/traje/traje9.jpeg",
+            "precio": "115.00",
+            "descripcion": "Traje azul oscuro con botones dorados"
+        }
+    ],
+    "Cortos": [
+        {
+            "id": 1,
+            "nombre": "Vestido Corto Rojo",
+            "imagen": "vestido/corto/corto1.jpeg",
+            "precio": "19.99",
+            "descripcion": "Vestido corto rojo con encaje"
+        },
+        {
+            "id": 2,
+            "nombre": "Vestido Corto Azul",
+            "imagen": "vestido/corto/corto2.jpeg",
+            "precio": "22.50",
+            "descripcion": "Vestido corto azul con volantes"
+        },
+        {
+            "id": 3,
+            "nombre": "Vestido Corto Negro",
+            "imagen": "vestido/corto/corto3.jpeg",
+            "precio": "25.00",
+            "descripcion": "Vestido corto negro para fiesta"
+        },
+        {
+            "id": 4,
+            "nombre": "Vestido Corto Floral",
+            "imagen": "vestido/corto/corto4.jpeg",
+            "precio": "28.90",
+            "descripcion": "Vestido corto con estampado floral"
+        },
+        {
+            "id": 5,
+            "nombre": "Vestido Corto Alineado",
+            "imagen": "vestido/corto/corto5.jpeg",
+            "precio": "30.99",
+            "descripcion": "Vestido corto con corte a la cintura"
+        },
+        {
+            "id": 6,
+            "nombre": "Vestido Corto Casual",
+            "imagen": "vestido/corto/corto6.jpeg",
+            "precio": "18.50",
+            "descripcion": "Vestido corto estilo casual"
+        },
+        {
+            "id": 7,
+            "nombre": "Vestido Corto Elegante",
+            "imagen": "vestido/corto/corto7.jpeg",
+            "precio": "35.00",
+            "descripcion": "Vestido corto elegante de terciopelo"
+        },
+        {
+            "id": 8,
+            "nombre": "Vestido Corto Liso",
+            "imagen": "vestido/corto/corto8.jpeg",
+            "precio": "26.00",
+            "descripcion": "Vestido corto liso con cintura ajustada"
+        },
+        {
+            "id": 9,
+            "nombre": "Vestido Corto De Noche",
+            "imagen": "vestido/corto/corto9.jpeg",
+            "precio": "40.00",
+            "descripcion": "Vestido corto de noche con detalles brillantes"
+        }
+    ],
+    "Largos": [
+        {
+            "id": 1,
+            "nombre": "Vestido Largo Elegante",
+            "imagen": "vestido/largo/vestidolargo1.jpeg",
+            "precio": "45.00",
+            "descripcion": "Vestido largo elegante para bodas"
+        },
+        {
+            "id": 2,
+            "nombre": "Vestido Largo Rojo",
+            "imagen": "vestido/largo/vestidolargo2.jpeg",
+            "precio": "50.00",
+            "descripcion": "Vestido largo rojo con tirantes"
+        },
+        {
+            "id": 3,
+            "nombre": "Vestido Largo Negro",
+            "imagen": "vestido/largo/vestidolargo3.jpeg",
+            "precio": "55.99",
+            "descripcion": "Vestido largo negro con detalles dorados"
+        },
+        {
+            "id": 4,
+            "nombre": "Vestido Largo Azul",
+            "imagen": "vestido/largo/vestidolargo4.jpeg",
+            "precio": "48.00",
+            "descripcion": "Vestido largo azul con escote"
+        },
+        {
+            "id": 5,
+            "nombre": "Vestido Largo Estilo Boho",
+            "imagen": "vestido/largo/vestidolargo5.jpeg",
+            "precio": "60.00",
+            "descripcion": "Vestido largo estilo boho chic"
+        },
+        {
+            "id": 6,
+            "nombre": "Vestido Largo Strapless",
+            "imagen": "vestido/largo/vestidolargo6.jpeg",
+            "precio": "58.50",
+            "descripcion": "Vestido largo strapless con falda fluida"
+        },
+        {
+            "id": 7,
+            "nombre": "Vestido Largo De Noche",
+            "imagen": "vestido/largo/vestidolargo7.jpeg",
+            "precio": "70.00",
+            "descripcion": "Vestido largo de noche con detalles en encaje"
+        },
+        {
+            "id": 8,
+            "nombre": "Vestido Largo Con Abertura",
+            "imagen": "vestido/largo/vestidolargo8.jpeg",
+            "precio": "72.00",
+            "descripcion": "Vestido largo con abertura en la pierna"
+        },
+        {
+            "id": 9,
+            "nombre": "Vestido Largo Floral",
+            "imagen": "vestido/largo/vestidolargo9.jpeg",
+            "precio": "75.00",
+            "descripcion": "Vestido largo con estampado floral vibrante"
+        }
+    ],
+    "Zapatos": [
+        {
+            "id": 1,
+            "nombre": "Botas Negras Cuero",
+            "imagen": "zapatos/botas/botas1.jpg",
+            "precio": "50.00",
+            "descripcion": "Botas de cuero negras con tacón"
+        },
+        {
+            "id": 2,
+            "nombre": "Botas Marrones",
+            "imagen": "zapatos/botas/botas2.jpg",
+            "precio": "55.00",
+            "descripcion": "Botas marrones de gamuza con cierre lateral"
+        },
+        {
+            "id": 3,
+            "nombre": "Botas Con Plataforma",
+            "imagen": "zapatos/botas/botas3.jpg",
+            "precio": "60.00",
+            "descripcion": "Botas altas con plataforma y tacón grueso"
+        },
+        {
+            "id": 4,
+            "nombre": "Botines De Cuero",
+            "imagen": "zapatos/botas/botas4.jpg",
+            "precio": "45.00",
+            "descripcion": "Botines de cuero negro con detalle de hebilla"
+        },
+        {
+            "id": 5,
+            "nombre": "Botas Estilo Cowboy",
+            "imagen": "zapatos/botas/botas5.jpg",
+            "precio": "65.00",
+            "descripcion": "Botas estilo cowboy de cuero marrón"
+        },
+        {
+            "id": 6,
+            "nombre": "Botas Altas Grises",
+            "imagen": "zapatos/botas/botas6.jpg",
+            "precio": "70.00",
+            "descripcion": "Botas altas de gamuza grises con tacón"
+        },
+        {
+            "id": 7,
+            "nombre": "Zapatillas Blancas Deportivas",
+            "imagen": "zapatos/zapatillas/zapatos7.jpg",
+            "precio": "40.00",
+            "descripcion": "Zapatillas deportivas blancas de tela"
+        },
+        {
+            "id": 8,
+            "nombre": "Zapatillas Negras",
+            "imagen": "zapatos/zapatillas/zapatos2.jpg",
+            "precio": "38.00",
+            "descripcion": "Zapatillas negras de material sintético"
+        },
+        {
+            "id": 9,
+            "nombre": "Zapatillas Con Estampado",
+            "imagen": "zapatos/zapatillas/zapatos3.jpg",
+            "precio": "42.00",
+            "descripcion": "Zapatillas deportivas con estampado llamativo"
+        }
+    ],
+    "Botas": [
+        {
+            "id": 1,
+            "nombre": "Botas Negras Cuero",
+            "imagen": "zapatos/botas/botas1.jpg",
+            "precio": "50.00",
+            "descripcion": "Botas de cuero negras con tacón"
+        },
+        {
+            "id": 2,
+            "nombre": "Botas Marrones",
+            "imagen": "zapatos/botas/botas2.jpg",
+            "precio": "55.00",
+            "descripcion": "Botas marrones de gamuza con cierre lateral"
+        },
+        {
+            "id": 3,
+            "nombre": "Botas Con Plataforma",
+            "imagen": "zapatos/botas/botas3.jpg",
+            "precio": "60.00",
+            "descripcion": "Botas altas con plataforma y tacón grueso"
+        },
+        {
+            "id": 4,
+            "nombre": "Botines De Cuero",
+            "imagen": "zapatos/botas/botas4.jpg",
+            "precio": "45.00",
+            "descripcion": "Botines de cuero negro con detalle de hebilla"
+        },
+        {
+            "id": 5,
+            "nombre": "Botas Estilo Cowboy",
+            "imagen": "zapatos/botas/botas5.jpg",
+            "precio": "65.00",
+            "descripcion": "Botas estilo cowboy de cuero marrón"
+        },
+        {
+            "id": 6,
+            "nombre": "Botas Altas Grises",
+            "imagen": "zapatos/botas/botas6.jpg",
+            "precio": "70.00",
+            "descripcion": "Botas altas de gamuza grises con tacón"
+        },
+        {
+            "id": 7,
+            "nombre": "Botas Cortas Negras",
+            "imagen": "zapatos/botas/botas7.jpg",
+            "precio": "48.00",
+            "descripcion": "Botas cortas negras de gamuza"
+        },
+        {
+            "id": 8,
+            "nombre": "Botines Altos",
+            "imagen": "zapatos/botas/botas8.jpg",
+            "precio": "52.00",
+            "descripcion": "Botines altos con tacón delgado"
+        },
+        {
+            "id": 9,
+            "nombre": "Botas De Lluvia",
+            "imagen": "zapatos/botas/botas9.jpg",
+            "precio": "38.00",
+            "descripcion": "Botas de lluvia impermeables y cómodas"
+        }
+    ]
+}
