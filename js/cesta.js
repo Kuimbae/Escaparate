@@ -113,3 +113,13 @@ let carrito = [
     ventana.document.close();
     ventana.print();
     }
+
+
+// Desaparecen botones de vaciar carrito y de realizar compra y aparecen los de las facturas //
+    function mostrarMensaje() {
+        document.getElementById('modal').style.display = 'block';
+        document.getElementById('vaciar-carrito').style.display = 'none';
+        document.getElementById('realizar-pedido').style.display = 'none';
+        document.getElementById('guardarFactura').style.display = 'inline-block';
+        document.getElementById('imprimirFactura').style.display = 'inline-block';
+    }

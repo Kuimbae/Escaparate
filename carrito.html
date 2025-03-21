@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="/css/cesta.css">
 
     <title>Cesta de Compra</title>
-    <button id="guardarFactura" onclick="guardarFactura()">Guardar Factura</button>
-    <button id="imprimirFactura" onclick="imprimirFactura()">Imprimir Factura</button>
+    <button id="guardarFactura" onclick="guardarFactura()" style="display: none;">Guardar Factura</button>
+    <button id="imprimirFactura" onclick="imprimirFactura()" style="display: none;">Imprimir Factura</button>
 </head>
 
 <body>
@@ -27,14 +27,10 @@
         </div>
     </div>
 
-    <script>
-        function mostrarMensaje() {
-            document.getElementById('modal').style.display = 'block';
-        }
-    </script>
+ 
     </div>
 </body>
 
-<script src="js/cesta.js "></script>
+<script src="js/cesta.js"></script>
 
 </html>
