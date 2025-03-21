@@ -238,15 +238,15 @@ body {
         background: #333;
         padding: 10px;
         border-radius: 5px;
-        width: 30px;
+        width: 40px;
         /* Hacer el botón más estrecho */
-        height: 30px;
+        height: 40px;
         text-align: center;
         /* Centrar el icono */
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 8px;
     }
 
     .barra-lateral {
@@ -307,13 +307,33 @@ body {
     transition: 0.3s;
     border: 2px solid #cf1c1c;
     border-radius: 5px;
-    position:absolute;
+    position: absolute;
     left: 0;
     margin-left: 25px; /* Ajusta según sea necesario */
 }
 
 .back-boton:hover {
     color: gray; /* Cambia el color al pasar el ratón */
+}
+
+/* BOTÓN INICIO SESIÓN RESPONSIVO */
+@media screen and (max-width: 768px) {
+    .back-boton {
+        display: inline-block;
+        /* Muestra el botón */
+        position: absolute;
+        width: 35px;
+        /* Hacer el botón más estrecho */
+        height: 35px;
+        text-align: center;
+        margin-top: 15px;
+        margin-left: 65px;
+    }
+}
+
+.fas.fa-arrow-left {
+    font-size: 35px;
+    text-align: center;
 }
 
 
