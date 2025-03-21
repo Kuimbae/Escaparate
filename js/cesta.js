@@ -2,9 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const carritoContenedor = document.getElementById("carrito-contenedor");
     const totalElemento = document.getElementById("total");
     const vaciarCarritoBtn = document.getElementById("vaciar-carrito");
-    const realizarPedidoBtn = document.getElementById("realizar-pedido");
-    const cerrarModalBtn = document.getElementById("cerrar-modal");
-    const modal = document.getElementById("modal");
 
     let totalCompra = 0;
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -54,27 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
         actualizarCarrito();
     });
 
-    // Realizar pedido
-    realizarPedidoBtn.addEventListener("click", () => {
-        if (carrito.length > 0) {
-            modal.style.display = "block";
-            localStorage.removeItem("carrito");
-            carrito = [];
-            actualizarCarrito();
-        } else {
-            alert("El carrito está vacío. Agrega productos antes de realizar el pedido.");
-        }
-    });
-
-    // Cerrar modal
-    cerrarModalBtn.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-    // Cargar carrito al inicio
+    // Llamar a la función para actualizar el carrito al cargar la página
     actualizarCarrito();
 });
-
 
 // Simulación de la estructura de la factura (puedes adaptar según tu estructura de carrito)
 let carrito = [

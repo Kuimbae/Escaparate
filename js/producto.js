@@ -91,34 +91,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 detallesDiv.appendChild(cantidadDiv);
 
-                // Botón de añadir al carrito
-                const boton = document.createElement("button");
-                boton.textContent = "Añadir al carrito";
-                boton.onclick = () => {
-                    const cantidad = cantidadInputField.value;
-                    console.log(`Producto añadido al carrito: ${producto.nombre} x${cantidad}`);
+                // Al añadir un producto al carrito
+const boton = document.createElement("button");
+boton.textContent = "Añadir al carrito";
+// Al añadir un producto al carrito
+boton.onclick = () => {
+    const cantidad = cantidadInputField.value;
+    console.log(`Producto añadido al carrito: ${producto.nombre} x${cantidad}`);
 
-                    // Crear un objeto del producto con la cantidad seleccionada
-                    const productoCarrito = {
-                        nombre: producto.nombre,
-                        imagen: producto.imagen,
-                        precio: producto.precio,
-                        cantidad: cantidad
-                    };
+    // Crear un objeto del producto con la cantidad seleccionada
+    const productoCarrito = {
+        nombre: producto.nombre,
+        imagen: producto.imagen,
+        precio: producto.precio,
+        cantidad: cantidad
+    };
 
-                    // Obtener el carrito actual del localStorage, o un array vacío si no existe
-                    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    // Obtener el carrito actual del localStorage, o un array vacío si no existe
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-                    // Añadir el nuevo producto al carrito
-                    carrito.push(productoCarrito);
+    // Añadir el nuevo producto al carrito
+    carrito.push(productoCarrito);
 
-                    // Guardar el carrito actualizado en localStorage
-                    localStorage.setItem("carrito", JSON.stringify(carrito));
+    // Guardar el carrito actualizado en localStorage
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 
-                    // Actualizar el contador del carrito
-                    actualizarContadorCarrito();
-                };
-                detallesDiv.appendChild(boton);
+    // Actualizar el contador del carrito
+    actualizarContadorCarrito();
+};
+
+detallesDiv.appendChild(boton);
+
 
                 // Añadir el contenedor de detalles al producto
                 productoDiv.appendChild(detallesDiv);
