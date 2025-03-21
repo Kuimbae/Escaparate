@@ -1,0 +1,120 @@
+/* Estilos generales del cuerpo */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Estilo para el título principal */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Contenedor de los productos del carrito */
+#carrito-contenedor {
+    width: 80%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Estilo para cada producto */
+.producto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para la imagen del producto */
+.producto img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+/* Contenedor de los detalles del producto */
+.producto h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+    font-weight: bold;
+}
+
+.producto p {
+    font-size: 1rem;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Estilos para el mensaje cuando el carrito está vacío */
+#carrito-contenedor p {
+    font-size: 1.2rem;
+    color: #777;
+    text-align: center;
+}
+
+/* Añadir espacio entre productos */
+.producto:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+/* Botón de vaciar carrito */
+#vaciar-carrito {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#vaciar-carrito:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo para el pie de página */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+/* Estilo para los botones dentro de los productos */
+.producto button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #2980b9;
+}
