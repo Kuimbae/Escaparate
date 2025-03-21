@@ -55,41 +55,45 @@ document.addEventListener("DOMContentLoaded", () => {
                 detallesDiv.appendChild(descripcion);
 
                 // Contenedor para la cantidad de productos
-                const cantidadDiv = document.createElement("div");
-                cantidadDiv.classList.add("cantidad");
+const cantidadDiv = document.createElement("div");
+cantidadDiv.classList.add("cantidad");
 
-                // Botón para disminuir cantidad
-                const botonMenos = document.createElement("button");
-                botonMenos.textContent = "-";
-                botonMenos.onclick = () => {
-                    let cantidadInput = cantidadInputField.value;
-                    if (cantidadInput > 1) {
-                        cantidadInput--;
-                        cantidadInputField.value = cantidadInput;
-                    }
-                };
-                cantidadDiv.appendChild(botonMenos);
+// Botón para disminuir cantidad
+const botonMenos = document.createElement("button");
+botonMenos.classList.add("boton-cantidad", "boton-menos");
+botonMenos.innerHTML = "&#8722;"; // Símbolo de menos (−)
+botonMenos.onclick = () => {
+    let cantidadInput = parseInt(cantidadInputField.value);
+    if (cantidadInput > 1) {
+        cantidadInput--;
+        cantidadInputField.value = cantidadInput;
+    }
+};
+cantidadDiv.appendChild(botonMenos);
 
-                // Campo de entrada para la cantidad
-                const cantidadInputField = document.createElement("input");
-                cantidadInputField.type = "number";
-                cantidadInputField.value = 1;  // Valor inicial
-                cantidadInputField.min = 1;    // No puede ser menos que 1
-                cantidadInputField.max = 99;   // Valor máximo de cantidad
-                cantidadInputField.setAttribute("readonly", true);  // Solo lectura para evitar cambios directos
-                cantidadDiv.appendChild(cantidadInputField);
+// Campo de entrada para la cantidad
+const cantidadInputField = document.createElement("input");
+cantidadInputField.type = "number";
+cantidadInputField.value = 0;
+cantidadInputField.min = 1;
+cantidadInputField.max = 99;
+cantidadInputField.setAttribute("readonly", true);
+cantidadInputField.classList.add("cantidad-input");
+cantidadDiv.appendChild(cantidadInputField);
 
-                // Botón para aumentar cantidad
-                const botonMas = document.createElement("button");
-                botonMas.textContent = "+";
-                botonMas.onclick = () => {
-                    let cantidadInput = cantidadInputField.value;
-                    cantidadInput++;
-                    cantidadInputField.value = cantidadInput;
-                };
-                cantidadDiv.appendChild(botonMas);
+// Botón para aumentar cantidad
+const botonMas = document.createElement("button");
+botonMas.classList.add("boton-cantidad", "boton-mas");
+botonMas.innerHTML = "&#43;"; // Símbolo de más (+)
+botonMas.onclick = () => {
+    let cantidadInput = parseInt(cantidadInputField.value);
+    cantidadInput++;
+    cantidadInputField.value = cantidadInput;
+};
+cantidadDiv.appendChild(botonMas);
 
-                detallesDiv.appendChild(cantidadDiv);
+detallesDiv.appendChild(cantidadDiv);
+
 
                 // Al añadir un producto al carrito
 const boton = document.createElement("button");

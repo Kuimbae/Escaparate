@@ -5,6 +5,60 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Ocultar las flechas en navegadores basados en WebKit (Chrome, Safari, Edge) */
+.cantidad-input::-webkit-inner-spin-button,
+.cantidad-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Ocultar las flechas en Firefox */
+.cantidad-input {
+    -moz-appearance: textfield;
+}
+
+.boton-cantidad {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-cantidad:hover {
+    background-color: #0056b3;
+}
+
+.boton-menos {
+    background-color: #dc3545;
+}
+
+.boton-menos:hover {
+    background-color: #b52b38;
+}
+
+.cantidad-input {
+    width:  40px;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    pointer-events: none; /* Evita la edición manual */
+}
 
 
 /* Estilo del encabezado */
