@@ -74,3 +74,63 @@ document.addEventListener("DOMContentLoaded", () => {
     // Cargar carrito al inicio
     actualizarCarrito();
 });
+
+
+// Simulación de la estructura de la factura (puedes adaptar según tu estructura de carrito)
+let carrito = [
+    { nombre: "Producto 1", cantidad: 2, precio: 15 },
+    { nombre: "Producto 2", cantidad: 1, precio: 25 }
+    ];
+    
+    let total = 0;
+    
+    // Mostrar los productos y total de la cesta
+    function mostrarFactura() {
+    let carritoContenedor = document.getElementById('carrito-contenedor');
+    let totalElemento = document.getElementById('total');
+    carritoContenedor.innerHTML = '';
+    carrito.forEach(item => {
+    carritoContenedor.innerHTML += `
+    <p>${item.nombre} - ${item.cantidad} x $${item.precio}</p>
+    `;
+    total += item.precio * item.cantidad;
+    });
+    totalElemento.innerHTML = `Total: $${total}`;
+    }
+    
+    // Función para guardar la factura (en formato de texto o JSON)
+    function guardarFactura() {
+    const factura = {
+    items: carrito,
+    total: total
+    };
+    // Convertimos la factura a un formato de texto (podrías usar JSON, CSV, etc.)
+    const facturaTexto = `
+    Factura:
+    -----------------------
+    ${carrito.map(item => `${item.nombre} - ${item.cantidad} x $${item.precio}`).join('\n')}
+    -----------------------
+    Total: $${total}
+    `;
+    // Crear un archivo de texto y descargarlo
+    const blob = new Blob([facturaTexto], { type: 'text/plain' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'factura.txt';
+    link.click();
+    }
+    
+    // Función para imprimir la factura
+    function imprimirFactura() {
+    const ventana = window.open('', '', 'width=600,height=400');
+    ventana.document.write('<html><head><title>Factura</title></head><body>');
+    ventana.document.write('<h1>Factura</h1>');
+    // Mostrar los productos en la factura
+    carrito.forEach(item => {
+    ventana.document.write(`<p>${item.nombre} - ${item.cantidad} x $${item.precio}</p>`);
+    });
+    ventana.document.write(`<h2>Total: $${total}</h2>`);
+    ventana.document.write('</body></html>');
+    ventana.document.close();
+    ventana.print();
+    }
