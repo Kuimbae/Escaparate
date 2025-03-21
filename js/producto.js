@@ -24,34 +24,44 @@ document.addEventListener("DOMContentLoaded", () => {
                 const productoDiv = document.createElement("div");
                 productoDiv.classList.add("producto");
 
-                // Crear la imagen del producto
+                // Contenedor para la imagen
+                const imagenDiv = document.createElement("div");
+                imagenDiv.classList.add("imagen");
                 const imagen = document.createElement("img");
                 imagen.src = `img/${producto.imagen}`;
                 imagen.alt = producto.nombre;
                 imagen.onerror = () => console.error("Error cargando la imagen:", imagen.src);
-                productoDiv.appendChild(imagen);
+                imagenDiv.appendChild(imagen);
+                productoDiv.appendChild(imagenDiv);
 
-                // Crear el nombre del producto
+                // Contenedor para los detalles (precio, descripción, etc.)
+                const detallesDiv = document.createElement("div");
+                detallesDiv.classList.add("detalles");
+
+                // Nombre del producto
                 const nombre = document.createElement("h3");
                 nombre.textContent = producto.nombre;
-                productoDiv.appendChild(nombre);
+                detallesDiv.appendChild(nombre);
 
-                // Crear el precio del producto
+                // Precio del producto
                 const precio = document.createElement("p");
                 precio.textContent = `Precio: $${producto.precio}`;
-                productoDiv.appendChild(precio);
+                detallesDiv.appendChild(precio);
 
-                // Crear la descripción del producto
+                // Descripción del producto
                 const descripcion = document.createElement("p");
                 descripcion.textContent = producto.descripcion;
-                productoDiv.appendChild(descripcion);
+                detallesDiv.appendChild(descripcion);
 
-                // Crear el botón de añadir al carrito
+                // Botón de añadir al carrito
                 const boton = document.createElement("button");
                 boton.textContent = "Añadir al carrito";
-                productoDiv.appendChild(boton);
+                detallesDiv.appendChild(boton);
 
-                // Añadir el producto al contenedor
+                // Añadir el contenedor de detalles al producto
+                productoDiv.appendChild(detallesDiv);
+
+                // Añadir el producto al contenedor principal
                 contenedorImagenes.appendChild(productoDiv);
             });
         } else {

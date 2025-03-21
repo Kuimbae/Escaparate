@@ -259,46 +259,46 @@
             "descripcion": "Vestido largo con estampado floral vibrante"
         }
     ],
-    "Zapatos": [
+    "Zapatillas": [
         {
             "id": 1,
             "nombre": "Botas Negras Cuero",
-            "imagen": "zapatos/botas/botas1.jpg",
+            "imagen": "zapatos/zapatillas/zapatos1.jpg",
             "precio": "50.00",
             "descripcion": "Botas de cuero negras con tacón"
         },
         {
             "id": 2,
             "nombre": "Botas Marrones",
-            "imagen": "zapatos/botas/botas2.jpg",
+            "imagen": "zapatos/zapatillas/zapatos2.jpg",
             "precio": "55.00",
             "descripcion": "Botas marrones de gamuza con cierre lateral"
         },
         {
             "id": 3,
             "nombre": "Botas Con Plataforma",
-            "imagen": "zapatos/botas/botas3.jpg",
+            "imagen": "zapatos/zapatillas/zapatos3.jpg",
             "precio": "60.00",
             "descripcion": "Botas altas con plataforma y tacón grueso"
         },
         {
             "id": 4,
             "nombre": "Botines De Cuero",
-            "imagen": "zapatos/botas/botas4.jpg",
+            "imagen": "zapatos/zapatillas/zapatos4.jpg",
             "precio": "45.00",
             "descripcion": "Botines de cuero negro con detalle de hebilla"
         },
         {
             "id": 5,
             "nombre": "Botas Estilo Cowboy",
-            "imagen": "zapatos/botas/botas5.jpg",
+            "imagen": "zapatos/zapatillas/zapatos5.jpg",
             "precio": "65.00",
             "descripcion": "Botas estilo cowboy de cuero marrón"
         },
         {
             "id": 6,
             "nombre": "Botas Altas Grises",
-            "imagen": "zapatos/botas/botas6.jpg",
+            "imagen": "zapatos/zapatillas/zapatos6.jpg",
             "precio": "70.00",
             "descripcion": "Botas altas de gamuza grises con tacón"
         },
@@ -312,14 +312,14 @@
         {
             "id": 8,
             "nombre": "Zapatillas Negras",
-            "imagen": "zapatos/zapatillas/zapatos2.jpg",
+            "imagen": "zapatos/zapatillas/zapatos8.jpg",
             "precio": "38.00",
             "descripcion": "Zapatillas negras de material sintético"
         },
         {
             "id": 9,
             "nombre": "Zapatillas Con Estampado",
-            "imagen": "zapatos/zapatillas/zapatos3.jpg",
+            "imagen": "zapatos/zapatillas/zapatos9.jpg",
             "precio": "42.00",
             "descripcion": "Zapatillas deportivas con estampado llamativo"
         }
