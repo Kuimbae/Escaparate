@@ -7,7 +7,7 @@
 body {
     width: 100%;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #d83333;
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,7 +18,7 @@ body {
 
 /* Estilo para el título principal */
 h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #333;
     margin-top: 20px;
 }
@@ -33,6 +33,13 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+}
+#total {
+    font-size: 2em;
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+    align-self: center;
 }
 
 /* Estilo para cada producto */
