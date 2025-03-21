@@ -19,12 +19,19 @@
     <a href="producto.html" class="back-boton">
         <i class="fas fa-arrow-left"></i>Seguir comprando</a>
     <button id="vaciar-carrito" class="vaciar-carrito">Vaciar carrito</button>
-    <button id="realizar-pedido" class="realizar-pedido">Realizar pedido</button>
-    <div id="modal" class="modal">
+    <button id="realizar-pedido" class="realizar-pedido" onclick="mostrarMensaje()">Realizar pedido</button>
+    <div id="modal" class="modal" style="display: none;">
         <div class="modal-contenido">
             <h3>¡Gracias por tu compra!</h3>
             <p>En breve recibirás un correo con los detalles de tu pedido.</p>
         </div>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            document.getElementById('modal').style.display = 'block';
+        }
+    </script>
     </div>
 </body>
 
