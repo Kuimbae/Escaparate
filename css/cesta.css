@@ -25,7 +25,7 @@ h1 {
 
 /* Contenedor de los productos del carrito */
 #carrito-contenedor {
-    width: 70%;
+    width: 60%;
     max-width: 1200px;
     margin-top: 11px;
     padding: 5px;
@@ -135,8 +135,9 @@ footer {
 
 /* Estilo para los botones dentro de los productos */
 .producto button {
-    background-color: #3498db;
-    color: white;
+   
+    color: black;
+   
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -147,11 +148,16 @@ footer {
 .producto button:hover {
     background-color: #2980b9;
 }
+
+
+.eliminar-articulo {
+    margin-right: 90px;
+}
 .back-boton {
     width: 10%; /* Aumenta el ancho del botón */
     display: inline-block;
     font-size: 18px; /* Aumenta el tamaño de la fuente */
-    color: rgb(204, 24, 24);
+    color: rgb(8, 8, 8);
     background-color: white;
     transition: 0.3s;
     border: 2px solid #cf1c1c;

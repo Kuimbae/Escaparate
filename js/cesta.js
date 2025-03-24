@@ -27,40 +27,57 @@ document.addEventListener("DOMContentLoaded", () => {
                 const controlCantidad = document.createElement("div");
                 controlCantidad.classList.add("control-cantidad");
 
-                // Botón de disminuir cantidad
-                const btnDisminuir = document.createElement("button");
-                btnDisminuir.textContent = "-";
-                btnDisminuir.addEventListener("click", () => {
-                    if (producto.cantidad > 1) {
-                        producto.cantidad--;
-                    } else {
-                        carrito.splice(index, 1);
-                    }
-                    guardarCarrito();
-                    actualizarCarrito();
-                });
-                controlCantidad.appendChild(btnDisminuir);
-
-                // Elemento para mostrar la cantidad
-                const cantidad = document.createElement("span");
-                cantidad.textContent = producto.cantidad;
-                controlCantidad.appendChild(cantidad);
-
-                // Botón de aumentar cantidad
-                const btnAumentar = document.createElement("button");
-                btnAumentar.textContent = "+";
-                btnAumentar.addEventListener("click", () => {
-                    producto.cantidad++;
-                    guardarCarrito();
-                    actualizarCarrito();
-                });
-                controlCantidad.appendChild(btnAumentar);
-
-                productoDiv.appendChild(controlCantidad);
-
+               
                 const precio = document.createElement("p");
                 precio.textContent = `Precio: $${producto.precio} x ${producto.cantidad} = $${(producto.precio * producto.cantidad).toFixed(2)}`;
                 productoDiv.appendChild(precio);
+
+                 // Botón de disminuir cantidad
+                 const btnDisminuir = document.createElement("button");
+                 btnDisminuir.textContent = "-";
+                 btnDisminuir.addEventListener("click", () => {
+                     if (producto.cantidad > 1) {
+                         producto.cantidad--;
+                     } else {
+                         carrito.splice(index, 1);
+                     }
+                     guardarCarrito();
+                     actualizarCarrito();
+                 });
+                 controlCantidad.appendChild(btnDisminuir);
+ 
+                 // Elemento para mostrar la cantidad
+                 const cantidad = document.createElement("span");
+                 cantidad.textContent = producto.cantidad;
+                 controlCantidad.appendChild(cantidad);
+ 
+                 // Botón de aumentar cantidad
+                 const btnAumentar = document.createElement("button");
+                 btnAumentar.textContent = "+";
+                 btnAumentar.addEventListener("click", () => {
+                     producto.cantidad++;
+                     guardarCarrito();
+                     actualizarCarrito();
+                 });
+                 controlCantidad.appendChild(btnAumentar);
+ 
+                 productoDiv.appendChild(controlCantidad);
+ 
+
+                // Botón de eliminar artículo
+                const btnEliminar = document.createElement("button");
+                btnEliminar.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="black">
+    <path d="M3 6h18v2H3V6zm2 3h14l-1.5 12H6.5L5 9zm3-5h8v2H8V4z"/>
+</svg>`;
+
+                btnEliminar.classList.add("eliminar-articulo");
+                btnEliminar.addEventListener("click", () => {
+                    carrito.splice(index, 1);
+                    guardarCarrito();
+                    actualizarCarrito();
+                });
+                productoDiv.appendChild(btnEliminar);
+
 
                 totalCompra += producto.precio * producto.cantidad;
                 carritoContenedor.appendChild(productoDiv);
@@ -90,12 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
 let carrito = [
     { nombre: "Producto 1", cantidad: 2, precio: 15 },
     { nombre: "Producto 2", cantidad: 1, precio: 25 }
-    ];
-    
-    let total = 0;
-    
-    // Mostrar los productos y total de la cesta
-    function mostrarFactura() {
+];
+
+let total = 0;
+
+// Mostrar los productos y total de la cesta
+function mostrarFactura() {
     let carritoContenedor = document.getElementById('carrito-contenedor');
     let totalElemento = document.getElementById('total');
     carritoContenedor.innerHTML = '';
@@ -103,16 +120,16 @@ let carrito = [
         carritoContenedor.innerHTML += `<p>${item.nombre} - ${item.cantidad} x $${item.precio} = $${(item.precio * item.cantidad).toFixed(2)}</p>`;
 
 
-    total += item.precio * item.cantidad;
+        total += item.precio * item.cantidad;
     });
     totalElemento.innerHTML = `Total: $${total}`;
-    }
-    
-    // Función para guardar la factura (en formato de texto o JSON)
-    function guardarFactura() {
+}
+
+// Función para guardar la factura (en formato de texto o JSON)
+function guardarFactura() {
     const factura = {
-    items: carrito,
-    total: total
+        items: carrito,
+        total: total
     };
     // Convertimos la factura a un formato de texto (podrías usar JSON, CSV, etc.)
     const facturaTexto = `
@@ -129,19 +146,19 @@ let carrito = [
     link.href = URL.createObjectURL(blob);
     link.download = 'factura.txt';
     link.click();
-    }
-    
-    function imprimirFactura() {
-        // Recuperar el carrito desde localStorage
-        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-        let total = 0;
-    
-        const ventana = window.open('', '', 'width=600,height=400');
-        ventana.document.write('<html><head><title>Factura</title></head><body>');
-        ventana.document.write('<h1>Factura</h1>');
-    
-        // Estilos para las imágenes en la factura
-        ventana.document.write(`
+}
+
+function imprimirFactura() {
+    // Recuperar el carrito desde localStorage
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    let total = 0;
+
+    const ventana = window.open('', '', 'width=600,height=400');
+    ventana.document.write('<html><head><title>Factura</title></head><body>');
+    ventana.document.write('<h1>Factura</h1>');
+
+    // Estilos para las imágenes en la factura
+    ventana.document.write(`
             <style>
                 img { max-width: 100px; height: auto; display: block; margin-bottom: 10px; }
                 p { font-size: 1.2rem; }
@@ -149,35 +166,34 @@ let carrito = [
                 .producto { margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
             </style>
         `);
-    
-        // Mostrar los productos en la factura
-        carrito.forEach(item => {
-            let subtotal = item.precio * item.cantidad;
-            total += subtotal;
-    
-            ventana.document.write(`
+
+    // Mostrar los productos en la factura
+    carrito.forEach(item => {
+        let subtotal = item.precio * item.cantidad;
+        total += subtotal;
+
+        ventana.document.write(`
                 <div class="producto">
                     <img src="img/${item.imagen}" alt="${item.nombre}">
                     <p>${item.nombre} - ${item.cantidad} x $${item.precio} = $${subtotal.toFixed(2)}</p>
                 </div>
             `);
-        });
-    
-        ventana.document.write(`<h2>Total: $${total.toFixed(2)}</h2>`);
-        ventana.document.write('</body></html>');
-        ventana.document.close();
-        ventana.print();
-    }
-    
-    
+    });
+
+    ventana.document.write(`<h2>Total: $${total.toFixed(2)}</h2>`);
+    ventana.document.write('</body></html>');
+    ventana.document.close();
+    ventana.print();
+}
+
+
 // Desaparecen botones de vaciar carrito y de realizar compra y aparecen los de las facturas //
-    function mostrarMensaje() {
-        document.getElementById('modal').style.display = 'block';
-        document.getElementById('vaciar-carrito').style.display = 'none';
-        document.getElementById('realizar-pedido').style.display = 'none';
-        document.getElementById('guardarFactura').style.display = 'inline-block';
-        document.getElementById('imprimirFactura').style.display = 'inline-block';
-    }
+function mostrarMensaje() {
+    document.getElementById('modal').style.display = 'block';
+    document.getElementById('vaciar-carrito').style.display = 'none';
+    document.getElementById('realizar-pedido').style.display = 'none';
+    document.getElementById('guardarFactura').style.display = 'inline-block';
+    document.getElementById('imprimirFactura').style.display = 'inline-block';
+}
 
 
-    
