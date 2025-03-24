@@ -70,7 +70,7 @@ cantidadDiv.appendChild(botonMenos);
 // Campo de entrada para la cantidad
 const cantidadInputField = document.createElement("input");
 cantidadInputField.type = "number";
-cantidadInputField.value = 0;
+cantidadInputField.value = 1;
 cantidadInputField.min = 1;
 cantidadInputField.max = 99;
 cantidadInputField.setAttribute("readonly", true);
