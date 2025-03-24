@@ -1,0 +1,137 @@
+/* Estilos generales para la factura */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 20px;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.header img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #4CAF50;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Información de la factura */
+.factura-info {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1rem;
+    color: #555;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.factura-info p {
+    margin: 5px 0;
+}
+
+/* Productos */
+.productos {
+    margin-bottom: 30px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.producto:last-child {
+    border-bottom: none;
+}
+
+.producto img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+}
+
+.producto-info {
+    flex-grow: 1;
+}
+
+.producto-info p {
+    margin: 3px 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Total */
+.total {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 20px;
+    color: #4CAF50;
+    border-top: 2px solid #4CAF50;
+    padding-top: 10px;
+}
+
+/* Pie de página */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Botón de impresión */
+.btn-imprimir {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-imprimir:hover {
+    background: #388E3C;
+}
