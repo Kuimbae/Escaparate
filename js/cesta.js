@@ -101,23 +101,45 @@ let carrito = [
     link.click();
     }
     
-    // Función para imprimir la factura
     function imprimirFactura() {
-    const ventana = window.open('', '', 'width=600,height=400');
-    ventana.document.write('<html><head><title>Factura</title></head><body>');
-    ventana.document.write('<h1>Factura</h1>');
-    // Mostrar los productos en la factura
-    carrito.forEach(item => {
-        ventana.document.write(`<p>${item.nombre} - ${item.cantidad} x $${item.precio} = $${(item.precio * item.cantidad).toFixed(2)}</p>`);
-    });
+        // Recuperar el carrito desde localStorage
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        let total = 0;
     
-    ventana.document.write(`<h2>Total: $${total}</h2>`);
-    ventana.document.write('</body></html>');
-    ventana.document.close();
-    ventana.print();
+        const ventana = window.open('', '', 'width=600,height=400');
+        ventana.document.write('<html><head><title>Factura</title></head><body>');
+        ventana.document.write('<h1>Factura</h1>');
+    
+        // Estilos para las imágenes en la factura
+        ventana.document.write(`
+            <style>
+                img { max-width: 100px; height: auto; display: block; margin-bottom: 10px; }
+                p { font-size: 1.2rem; }
+                h1, h2 { text-align: center; }
+                .producto { margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+            </style>
+        `);
+    
+        // Mostrar los productos en la factura
+        carrito.forEach(item => {
+            let subtotal = item.precio * item.cantidad;
+            total += subtotal;
+    
+            ventana.document.write(`
+                <div class="producto">
+                    <img src="img/${item.imagen}" alt="${item.nombre}">
+                    <p>${item.nombre} - ${item.cantidad} x $${item.precio} = $${subtotal.toFixed(2)}</p>
+                </div>
+            `);
+        });
+    
+        ventana.document.write(`<h2>Total: $${total.toFixed(2)}</h2>`);
+        ventana.document.write('</body></html>');
+        ventana.document.close();
+        ventana.print();
     }
-
-
+    
+    
 // Desaparecen botones de vaciar carrito y de realizar compra y aparecen los de las facturas //
     function mostrarMensaje() {
         document.getElementById('modal').style.display = 'block';
