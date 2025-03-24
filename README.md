@@ -41,7 +41,14 @@
 
 # Día 21/03
 
-- Realizamos una reaunión para comenytar los realizado el día anterior y poner al día a la compañera.
+- Realizamos una reunión para comenytar los realizado el día anterior y poner al día a la compañera.
+- Empezamos a mirar los trabajos extras que se añadieron 
+- Nos repartimos los trabajos
+- A las 12:00h nos reunimos para poner en común los cambios realizados.
+- Añadimos un Json para cargar las imágenes
 
 
+# Día 24/03
+
+-08:30h realizamos una reunión para hablar de lo realizado el día anterior y ver qué cambios queríamos realizar o añadir
 
