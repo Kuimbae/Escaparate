@@ -191,7 +191,7 @@ li {
     gap: 5px; /* Espacio entre imágenes */
     padding: 30px; /* Espacio alrededor del contenedor */
     margin: 0 auto; /* Centra el contenedor */
-    margin-left: 500px;
+    margin-left: px;
     width: 45%; /* Asegura que ocupe todo el ancho disponible */
 }
 
@@ -228,9 +228,8 @@ li {
     }
 
     .contenedor-imagenes img {
-        max-width: 40%; /* Las imágenes ocupan el 80% del ancho del contenedor */
+        width: 100%; /* Las imágenes ocupan el 100% del ancho del contenedor */
         height: auto; /* Mantiene la proporción original de las imágenes */
-        height: 100%; /* Asegura que todas las imágenes ocupen el mismo espacio */
         object-fit: cover; /* Ajusta la imagen para que se adapte al contenedor, recortando si es necesario */
     }
 }
@@ -242,7 +241,7 @@ li {
     }
 
     .contenedor-imagenes img {
-        max-width: 70%; /* Las imágenes ocupan el 70% del ancho del contenedor */
+        width: 100%; /* Las imágenes ocupan el 100% del ancho del contenedor */
         height: auto; /* Mantiene la proporción original de las imágenes */
     }
 }
