@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 productoDiv.appendChild(cantidad);
 
                 const precio = document.createElement("p");
-                precio.textContent = `Precio: $${producto.precio}`;
+                /*precio.textContent = `Precio: $${producto.precio}`;*/
+                precio.textContent = `Precio: $${producto.precio} x ${producto.cantidad} = $${(producto.precio * producto.cantidad).toFixed(2)}`;
                 productoDiv.appendChild(precio);
 
                 totalCompra += producto.precio * producto.cantidad;
@@ -69,9 +70,9 @@ let carrito = [
     let totalElemento = document.getElementById('total');
     carritoContenedor.innerHTML = '';
     carrito.forEach(item => {
-    carritoContenedor.innerHTML += `
-    <p>${item.nombre} - ${item.cantidad} x $${item.precio}</p>
-    `;
+        carritoContenedor.innerHTML += `<p>${item.nombre} - ${item.cantidad} x $${item.precio} = $${(item.precio * item.cantidad).toFixed(2)}</p>`;
+
+
     total += item.precio * item.cantidad;
     });
     totalElemento.innerHTML = `Total: $${total}`;
@@ -87,7 +88,8 @@ let carrito = [
     const facturaTexto = `
     Factura:
     -----------------------
-    ${carrito.map(item => `${item.nombre} - ${item.cantidad} x $${item.precio}`).join('\n')}
+    ${carrito.map(item => `${item.nombre} - ${item.cantidad} x $${item.precio} = $${(item.precio * item.cantidad).toFixed(2)}`).join('\n')}
+
     -----------------------
     Total: $${total}
     `;
@@ -106,8 +108,9 @@ let carrito = [
     ventana.document.write('<h1>Factura</h1>');
     // Mostrar los productos en la factura
     carrito.forEach(item => {
-    ventana.document.write(`<p>${item.nombre} - ${item.cantidad} x $${item.precio}</p>`);
+        ventana.document.write(`<p>${item.nombre} - ${item.cantidad} x $${item.precio} = $${(item.precio * item.cantidad).toFixed(2)}</p>`);
     });
+    
     ventana.document.write(`<h2>Total: $${total}</h2>`);
     ventana.document.write('</body></html>');
     ventana.document.close();
@@ -123,3 +126,6 @@ let carrito = [
         document.getElementById('guardarFactura').style.display = 'inline-block';
         document.getElementById('imprimirFactura').style.display = 'inline-block';
     }
+
+
+    
