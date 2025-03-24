@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Precio del producto
                 const precio = document.createElement("p");
-                precio.textContent = `Precio: $${producto.precio}`;
+                precio.textContent = `Precio: ${producto.precio}€`;
                 detallesDiv.appendChild(precio);
 
 

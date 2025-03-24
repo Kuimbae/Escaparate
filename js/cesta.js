@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                
                 const precio = document.createElement("p");
-                precio.textContent = `Precio: $${producto.precio} x ${producto.cantidad} = $${(producto.precio * producto.cantidad).toFixed(2)}`;
+                precio.textContent = `Precio: ${producto.precio}€ x ${producto.cantidad} = ${(producto.precio * producto.cantidad).toFixed(2)}€`;
                 productoDiv.appendChild(precio);
 
                  // Botón de disminuir cantidad
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 carritoContenedor.appendChild(productoDiv);
             });
 
-            totalElemento.textContent = `Total de la compra: $${totalCompra.toFixed(2)}`;
+            totalElemento.textContent = `Total de la compra: ${totalCompra.toFixed(2)}€`;
         } else {
             carritoContenedor.innerHTML = "<p>No hay productos en el carrito.</p>";
             totalElemento.textContent = "Total de la compra: $0.00";
@@ -175,7 +175,7 @@ function imprimirFactura() {
         ventana.document.write(`
                 <div class="producto">
                     <img src="img/${item.imagen}" alt="${item.nombre}">
-                    <p>${item.nombre} - ${item.cantidad} x $${item.precio} = $${subtotal.toFixed(2)}</p>
+                    <p>${item.nombre} - ${item.cantidad} x ${item.precio}€ = ${subtotal.toFixed(2)}€</p>
                 </div>
             `);
     });
