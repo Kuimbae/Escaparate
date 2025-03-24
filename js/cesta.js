@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         totalCompra = 0;
 
         if (carrito.length > 0) {
-            carrito.forEach(producto => {
+            carrito.forEach((producto, index) => {
                 const productoDiv = document.createElement("div");
                 productoDiv.classList.add("producto");
 
@@ -24,17 +24,45 @@ document.addEventListener("DOMContentLoaded", () => {
                 nombre.textContent = producto.nombre;
                 productoDiv.appendChild(nombre);
 
-                const cantidad = document.createElement("p");
-                cantidad.textContent = `Cantidad: ${producto.cantidad}`;
-                productoDiv.appendChild(cantidad);
+                const controlCantidad = document.createElement("div");
+                controlCantidad.classList.add("control-cantidad");
+
+                // Botón de disminuir cantidad
+                const btnDisminuir = document.createElement("button");
+                btnDisminuir.textContent = "-";
+                btnDisminuir.addEventListener("click", () => {
+                    if (producto.cantidad > 1) {
+                        producto.cantidad--;
+                    } else {
+                        carrito.splice(index, 1);
+                    }
+                    guardarCarrito();
+                    actualizarCarrito();
+                });
+                controlCantidad.appendChild(btnDisminuir);
+
+                // Elemento para mostrar la cantidad
+                const cantidad = document.createElement("span");
+                cantidad.textContent = producto.cantidad;
+                controlCantidad.appendChild(cantidad);
+
+                // Botón de aumentar cantidad
+                const btnAumentar = document.createElement("button");
+                btnAumentar.textContent = "+";
+                btnAumentar.addEventListener("click", () => {
+                    producto.cantidad++;
+                    guardarCarrito();
+                    actualizarCarrito();
+                });
+                controlCantidad.appendChild(btnAumentar);
+
+                productoDiv.appendChild(controlCantidad);
 
                 const precio = document.createElement("p");
-                /*precio.textContent = `Precio: $${producto.precio}`;*/
                 precio.textContent = `Precio: $${producto.precio} x ${producto.cantidad} = $${(producto.precio * producto.cantidad).toFixed(2)}`;
                 productoDiv.appendChild(precio);
 
                 totalCompra += producto.precio * producto.cantidad;
-
                 carritoContenedor.appendChild(productoDiv);
             });
 
@@ -45,14 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Vaciar carrito
+    function guardarCarrito() {
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+    }
+
     vaciarCarritoBtn.addEventListener("click", () => {
         carrito = [];
         localStorage.removeItem("carrito");
         actualizarCarrito();
     });
 
-    // Llamar a la función para actualizar el carrito al cargar la página
     actualizarCarrito();
 });
 
