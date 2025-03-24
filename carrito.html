@@ -15,16 +15,18 @@
     <div id="carrito-contenedor"></div>
     <h2 id="total"></h2>
 
-    <a href="producto.html" class="back-boton">
-        <i class="fas fa-arrow-left"></i>Seguir comprando</a>
+    
     <button id="vaciar-carrito" class="vaciar-carrito">Vaciar carrito</button>
     <button id="realizar-pedido" class="realizar-pedido" onclick="mostrarMensaje()">Realizar pedido</button>
+    <a href="producto.html" class="back-boton">
+        <i class="fas fa-arrow-left"></i>Seguir comprando</a>
     <div id="modal" class="modal" style="display: none;">
         <div class="modal-contenido">
             <h3>¡Gracias por tu compra!</h3>
             <p>En breve recibirás un correo con los detalles de tu pedido.</p>
             <button id="guardarFactura" onclick="guardarFactura()" style="display: none;">Guardar Factura</button>
             <button id="imprimirFactura" onclick="imprimirFactura()" style="display: none;">Imprimir Factura</button>
+         
         </div>
     </div>
 </body>
