@@ -37,6 +37,22 @@ h1 {
     word-wrap: break-word;
 }
 
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+        left: 45%;
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+        left: 40%;
+        transform: translateX(-50%);
+    }
+}
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -57,6 +73,20 @@ h1 {
     cursor: pointer;
     color: white;
     display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .menu-icon {
+        display: block;
+        font-size: 20px;
+    }
+
 }
 
 /* Menú desplegable */
@@ -100,6 +130,20 @@ h1 {
     background-color: #d94e00;
 }
 
+@media (max-width: 768px) {
+    .subscribe-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .subscribe-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
 /* Barra de búsqueda */
 .search-container {
     width: 100%;
@@ -109,7 +153,6 @@ h1 {
     margin-top: 80px;
     padding: 20px;
 }
-
 .search-bar {
     border: none;
     background: rgba(255, 255, 255, 0.8);
@@ -130,6 +173,39 @@ h1 {
     border-radius: 20px;
     padding: 8px 15px;
 }
+
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .search-bar {
+        width: 50%;
+    }
+
+    .search-btn {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-container {
+        padding: 10px;
+    }
+
+    .search-bar {
+        width: 6075%;
+    }
+
+    .search-btn {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+}
+
+
 
 #error-message{
     color: rgb(255, 255, 255); 
@@ -177,6 +253,7 @@ footer {
     border: 1px solid #ddd;
     border-radius: 4px;
     width: 250px;
+    text-align: center;
 }
 
 .footer-section.subscribe label.subscribe-btn {
@@ -269,17 +346,3 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 30px;
-        left: 40%;
-        }
-}
-
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 25px;
-        left: 35%;
-        transform: translateX(-40%);
-    }
-}
