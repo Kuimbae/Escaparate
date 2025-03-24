@@ -51,7 +51,7 @@ function imprimirFactura() {
     // Total
     ventana.document.write(`
         <div class="total">
-            <p>Total de la compra: $${total.toFixed(2)}</p>
+            <p>Total de la compra: ${total.toFixed(2)}€</p>
         </div>
     `);
 
