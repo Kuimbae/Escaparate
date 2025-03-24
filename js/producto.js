@@ -93,6 +93,8 @@ detallesDiv.appendChild(cantidadDiv);
 
                 // Al añadir un producto al carrito
 const boton = document.createElement("button");
+
+boton.classList.add("btnAgregarCarrito"); 
 boton.textContent = "Añadir al carrito";
 // Al añadir un producto al carrito
 boton.onclick = () => {

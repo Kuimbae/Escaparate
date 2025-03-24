@@ -220,6 +220,29 @@ li {
     height: 100%;
     object-fit: cover; /* Ajusta la imagen sin deformarse */
 }
+h3, p, .cantidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnAgregarCarrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto; /* Esto lo centra horizontalmente */
+    background-color: #b4d1f0;
+    font-size: 15px;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btnAgregarCarrito:hover {
+    background-color: #0458b3c9;
+}
+
 
 /* Para pantallas más pequeñas */
 @media (max-width: 768px) {
