@@ -1,7 +1,7 @@
 /* Reseteo de márgenes y paddings para asegurar consistencia */
 * {
     margin: 0;
-    padding: 0;
+    padding: 1;
     box-sizing: border-box; 
 }
 
@@ -15,7 +15,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: space-between; /* Esto permite que el footer quede en la parte de abajo */
-    
 }
 
 body::before {
@@ -30,16 +29,31 @@ body::before {
     z-index: -1;
 }
 
+/* Responsividad para pantallas de 768px */
+@media (max-width: 768px) {
+    body::before {
+        width: 100%;
+        height: 55%;
+    }
+}
+
+/* Responsividad para pantallas de 480px */
+@media (max-width: 480px) {
+    body::before {
+        width: 100%;
+        height: 55%;
+   }
+}
 
 
 .back-boton {
     width: 2%;
     margin-left: 1%;
     display: inline-block;
-    font-size: 20px;
+    font-size: 35px;
     color: BLACK;
     transition: 0.3s;
-    border: 2px solid #ddd;
+    border: 2px solid #3b3232;
     border-radius: 5px;
 }
 
@@ -47,10 +61,38 @@ body::before {
     color: gray; /* Cambia el color al pasar el ratón */
 }
 
+/* Responsividad para pantallas de 768px */
+@media (max-width: 768px) {
+    .back-boton {
+        width: 15%;
+        font-size: 25px;
+    }
+}
+
+/* Responsividad para pantallas de 480px */
+@media (max-width: 480px) {
+    .back-boton {
+        width: 10%;
+        font-size: 16px;
+    }
+}
+
 h1 {
     font-size: 50px;
     color: rgb(255, 255, 255);
 }
+
+/* Responsividad para pantallas de 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+/* Responsividad para pantallas de 480px */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
 
 main {
     width: 50%;
@@ -61,6 +103,22 @@ main {
     padding: 20px;
 }
 
+/* Responsividad para pantallas de 768px */
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+/* Responsividad para pantallas de 480px */
+
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
 /* Estilos del formulario de login */
 .login-container {
     background-color: white;
@@ -69,6 +127,22 @@ main {
     padding: 30px;
     width: 100%;
     max-width: 400px;
+}
+
+/* Responsividad para pantallas de 768px */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 15px;
+        max-width: 260px;
+    }
+}
+
+/* Responsividad para pantallas de 480px */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+        max-width: 260px;
+    }
 }
 
 /* Estilo del título dentro del formulario */
@@ -135,15 +209,3 @@ button.btn:hover {
 
 
 
-
-/* Responsividad para pantallas más pequeñas */
-@media (max-width: 600px) {
-    .login-container {
-        padding: 20px;
-        width: 100%;
-    }
-
-    footer {
-        padding: 15px 0;
-    }
-}
