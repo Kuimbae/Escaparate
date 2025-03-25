@@ -46,15 +46,13 @@
 
     <footer>
         <section class="footer-section subscribe">
-            <form class="subscribe-form" id="subscribeForm">
+            <form class="subscribe-form">
                 <input type="email" id="email" placeholder="Ingresa tu correo" required />
-                <!-- Cambié el type a "button" para evitar el comportamiento predeterminado de un formulario -->
-                <button type="button" class="subscribe-btn" id="miBoton">Suscribirse</button>
-                <span class="success-message">¡Suscripción correcta!</span>
+                <label for="subscription" class="subscribe-btn">Suscríbete</label>
+                <input type="checkbox" id="subscription" class="subscription-checkbox" hidden />
+                <div class="success-message">¡Suscripción correcta!</div>
             </form>
-    
         </section>
-
 
 
         <section class="footer-section">
