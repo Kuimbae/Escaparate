@@ -12,6 +12,75 @@ html {
     height: 100%;
     overflow-x: hidden;
 }
+ 
+a {
+    padding: 9px 20px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+li {
+    padding: -1px -1.5px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 1px;
+    color: white;
+    font-size: 3px;
+    cursor: pointer;
+}
+
+.inicia-sesion {
+    padding: 9px 20px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    a {
+        font-size: 20px;
+        padding: 3px 16px;
+    }
+
+    li {
+        font-size: 2px;
+        padding: -0.5px -1px;
+    }
+
+    .inicia-sesion {
+        font-size: 20px;
+        padding: 8px 12px;
+        margin-left: 40px; /* Ajustado para mover más a la izquierda */
+        display: inline;
+    }
+}
+
+@media (max-width: 480px) {
+    a {
+        font-size: 14px;
+        padding: 5px 11px;
+    }
+
+    li {
+        font-size: 1.5px;
+        padding: -0.5px -0.5px;
+    }
+
+    .inicia-sesion {
+        font-size: 14px;
+        padding: 9px 15px;
+        margin-left: 40px; /* Ajustado para mover más a la izquierda */
+        display: inline;
+    }
+}
 
 #video-fondo {
     position: fixed;
@@ -39,16 +108,16 @@ h1 {
 
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 20px;
-        left: 45%;
+        font-size: 30px;
+        left: 47%;
         transform: translateX(-50%);
     }
 }
 
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 20px;
-        left: 40%;
+        font-size: 25px;
+        left: 47%;
         transform: translateX(-50%);
     }
 }
@@ -59,7 +128,7 @@ h1 {
     justify-content: space-between;
     align-items: center;
     background: rgba(44, 32, 32, 0.7);
-    padding: 15px 20px;
+    padding: 25px 20px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -67,57 +136,20 @@ h1 {
     z-index: 1000;
 }
 
-/* Menú hamburguesa */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    display: none;
-}
-
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-        font-size: 20px;
-    }
-}
-@media screen and (max-width: 480px) {
-    .menu-icon {
-        display: block;
-        font-size: 20px;
-    }
-
-}
-
 /* Menú desplegable */
 .menu {
     display: flex;
 }
 
-.menu ul {
-    list-style: none;
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-
-}
-
-.menu ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    display: block;
-}
 
 .menu ul li a:hover {
     background-color: #444;
     border-radius: 5px;
 }
 
-/* Botón de Suscribirse */
-.subscribe-btn {
-    padding: 10px 20px;
+
+#miBoton {
+    padding: 8px 17px;
     background-color: #ff6600;
     border: none;
     border-radius: 5px;
@@ -126,23 +158,22 @@ h1 {
     cursor: pointer;
 }
 
-.subscribe-btn:hover {
-    background-color: #d94e00;
-}
-
 @media (max-width: 768px) {
-    .subscribe-btn {
-        font-size: 14px;
-        padding: 8px 16px;
+    #miBoton {
+        font-size: 17px;
+        padding: 5px 12px;
+        margin-left: 10px;
     }
 }
 
 @media (max-width: 480px) {
-    .subscribe-btn {
-        font-size: 12px;
-        padding: 6px 12px;
+    #miBoton {
+        font-size: 15px;
+        padding: 5px 12px;
+        margin-left: 10px;
     }
 }
+
 
 /* Barra de búsqueda */
 .search-container {
@@ -181,7 +212,7 @@ h1 {
     }
 
     .search-bar {
-        width: 50%;
+        width: 60%;
     }
 
     .search-btn {
@@ -196,7 +227,7 @@ h1 {
     }
 
     .search-bar {
-        width: 6075%;
+        width: 60%;
     }
 
     .search-btn {
@@ -217,7 +248,7 @@ footer {
     background: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 12px;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -227,7 +258,8 @@ footer {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px; /* Reduce el espacio entre los elementos */
+    font-size: 14px; /* Reduce el tamaño de los elementos */
 }
 
 .footer-section .social-media li {
@@ -237,14 +269,14 @@ footer {
 
 .footer-section .social-media li a {
     color: rgb(255, 254, 253);
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .footer-section.subscribe form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 7px;
 }
 
 .footer-section.subscribe input[type="email"] {
@@ -252,7 +284,7 @@ footer {
     font-size: 16px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    width: 250px;
+    width: 225px;
     text-align: center;
 }
 
@@ -309,40 +341,5 @@ footer {
 /* Mostrar el mensaje cuando el checkbox está marcado */
 .subscription-checkbox:checked+.success-message {
     display: block;
-}
-
-
-
-/* Estilos Responsivos */
-
-@media (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: rgba(44, 32, 32, 0.9);
-        border-radius: 5px;
-        padding: 10px;
-        z-index: 1000;
-    }
-
-    .menu.active {
-        display: flex;
-        /* Muestra el menú cuando está activo */
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .search-container {
-        flex-direction: column;
-    }
-
-    .search-bar {
-        width: 90%;
-    }
 }
 
