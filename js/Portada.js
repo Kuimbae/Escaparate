@@ -1,3 +1,24 @@
+console.log("Portada.js cargado");
+
+document.addEventListener("DOMContentLoaded", function () {
+    function redirigirAProductos() {
+        let searchTerm = document.querySelector(".search-bar").value.trim();
+        if (searchTerm) {
+            console.log("Buscando:", searchTerm); // Verificar búsqueda
+            window.location.href = `producto.html?search=${encodeURIComponent(searchTerm)}`;
+        } else {
+            alert("Por favor, ingrese un término de búsqueda.");
+        }
+    }
+
+    document.querySelector(".search-btn").addEventListener("click", redirigirAProductos);
+    document.querySelector(".search-bar").addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            redirigirAProductos();
+        }
+    });
+});
 
     document.getElementById("menu-icon").addEventListener("click", function () {
         document.getElementById("menu").classList.toggle("active");
