@@ -51,13 +51,27 @@
 }
 
 .cantidad-input {
-    width:  40px;
+    width: 40px;
     text-align: center;
     border: none;
     font-size: 16px;
     font-weight: bold;
     background-color: #f8f9fa;
     pointer-events: none; /* Evita la edición manual */
+}
+
+@media screen and (max-width: 768px) {
+    .cantidad-input {
+        width: 20px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cantidad-input {
+        width: 20px;
+        font-size: 10px;
+    }
 }
 
 
@@ -67,14 +81,16 @@
     width: 50px;
     font-size: 16px;
 }
-
 header {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.979);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Distribuye los elementos: uno a la izquierda y otro a la derecha */
-    padding: 10px;  
+    padding: 10px;
+    position: fixed; /* Hace que el header sea fijo */
+    top: 0; /* Lo posiciona en la parte superior */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 h1 {
@@ -144,7 +160,7 @@ a.dropdown {
     /* Ocultar por defecto */
     font-size: 30px;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 15px;
     background-color: #bd5353;
@@ -231,10 +247,37 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ddd;
+    border: 1px solid #f8f6f6;
     overflow: hidden;
     height: 112%;
     width: 112%;
+    margin-top: 85px;
+}
+
+/* Responsivo para pantallas de 768px o menos */
+@media screen and (max-width: 768px) {
+    .producto {
+        height: 200%;
+        width: 200%;
+        margin-top: 55px;
+        margin-left: -45px; /* Mueve más a la izquierda */
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+    }
+}
+
+/* Responsivo para pantallas de 480px o menos */
+@media screen and (max-width: 480px) {
+    .producto {
+        height: 150%;
+        width: 150%;
+        margin-top: 35px;
+        margin-left: -35px; /* Mueve más a la izquierda */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .imagen {
@@ -249,6 +292,22 @@ li {
     width: 40%;
     height: 100%;
     object-fit: cover; /* Ajusta la imagen sin deformarse */
+}
+
+/* Responsivo para pantallas de 768px o menos */
+@media screen and (max-width: 768px) {
+    .imagen img {
+        width: 60%; /* Ajusta el ancho para pantallas medianas */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+}
+
+/* Responsivo para pantallas de 480px o menos */
+@media screen and (max-width: 480px) {
+    .imagen img {
+        width: 80%; /* Ajusta el ancho para pantallas pequeñas */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
 }
 
 h3, p {
@@ -268,14 +327,14 @@ h3, p {
 @media screen and (max-width: 768px) {
     h3, p {
         flex-direction: row;
-        font-size: 10px;
+        font-size: 35px;
     }
 }
 
 @media screen and (max-width: 480px) {
     h3, p {
         flex-direction: column;
-        font-size: 10px;
+        font-size: 17px;
     }
 }
 
