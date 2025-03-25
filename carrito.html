@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/cesta.css">
+    <link rel="stylesheet" href="/css/cesta.css" >
+    <link rel="stylesheet" href="/css/factura.css" media="print" >
     <title>Cesta de Compra</title>
     <script src="js/cesta.js"></script>
     <script src="js/factura.js"></script>
@@ -18,12 +19,12 @@
 
     
     <button id="vaciar-carrito" class="vaciar-carrito">Vaciar carrito</button>
-    <button id="realizar-pedido" class="realizar-pedido" onclick="mostrarMensaje()">Realizar pedido</button>
+    <button id="realizar-pedido" class="realizar-pedido" onclick="mostrarMensaje()">Solicitar Presupuesto</button>
     <a href="producto.html" class="back-boton">
         <i class="fas fa-arrow-left"></i>Seguir comprando</a>
     <div id="modal" class="modal" style="display: none;">
         <div class="modal-contenido">
-            <h3>¡Gracias por tu compra!</h3>
+            <h3>¡Gracias visitar nuestra pagina!</h3>
             <p>En breve recibirás un correo con los detalles de tu pedido.</p>
             <div class="factura-botones">
                 <button id="imprimirFactura" onclick="imprimirFactura()">Imprimir Factura</button>
@@ -32,7 +33,5 @@
         </div>
     </div>
 </body>
-
-
 
 </html>
