@@ -33,8 +33,8 @@ h1 {
 /* Contenedor de los productos del carrito */
 #carrito-contenedor {
     width: 90%;
-    max-width: 1200px;
-    margin-top: 11px;
+    max-width: 1083px;
+    margin-top: 55px;
     padding: 5px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -267,6 +267,20 @@ h1 {
         margin-left: 0;
     }
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.chio-lecca.edu.pe/cdn/shop/articles/chio-lecca-blog-estilo-y-moda.jpg?v=1673918894') center/contain no-repeat;
+    opacity: 0.5;
+    /* Ajusta la opacidad */
+    z-index: -1;
+}
+
 
 .factura-botones {
     display: flex;

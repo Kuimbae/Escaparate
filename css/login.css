@@ -127,6 +127,10 @@ main {
     padding: 30px;
     width: 100%;
     max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
 }
 
 /* Responsividad para pantallas de 768px */

@@ -14,7 +14,9 @@
 </head>
 
 <body>
-    <div id="header"></div>
+    <header>
+        <h1 class="logo">INPUT PRO STYLE</h1>
+    </header>
 
     <a href="portada.html" class="back-boton">
         <i class="fas fa-arrow-left"></i> </a>
@@ -49,19 +51,27 @@
         </section>
     </main>
 
-    <div id="footer"></div>
-
-    <script>
-        // Cargar el contenido del header y footer
-        document.getElementById("header").innerHTML = fetch("header.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("header").innerHTML = data);
-
-        document.getElementById("footer").innerHTML = fetch("footer.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("footer").innerHTML = data);
-    </script>
-
+   
+<footer>
+    <section class="footer-section subscribe">
+        <form class="subscribe-form">
+            <input type="email" id="email" placeholder="Ingresa tu correo" required />
+            <label for="subscription" class="subscribe-btn">Suscríbete</label>
+            <input type="checkbox" id="subscription" class="subscription-checkbox" hidden />
+            <div class="success-message">¡Suscripción correcta!</div>
+        </form>
+    </section>
+    
+    
+    
+    <section class="footer-section">
+        <ul class="social-media">
+            <li><a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.google.com/maps/dir//Bolueta,+48004+Bilbao,+Vizcaya/@43.2474913,-2.9506615,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0xd4e4e51edb2e59f:0x87ef4d85092fce0!2m2!1d-2.9093762!2d43.2474362!3e0?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank"><i class="fas fa-map-marker-alt"></i></a></li>
+        </ul>
+    </section>
+</footer>
 </body>
 
 </html>
