@@ -56,9 +56,9 @@ li {
     }
 
     .inicia-sesion {
-        font-size: 20px;
-        padding: 8px 12px;
-        margin-left: 40px; /* Ajustado para mover más a la izquierda */
+        font-size: 16px; /* Reducido para ser más pequeño */
+        padding: 6px 10px; /* Ajustado para ser más compacto */
+        margin-left: 50px; /* Ajustado para mover más a la izquierda */
         display: inline;
     }
 }
@@ -66,7 +66,7 @@ li {
 @media (max-width: 480px) {
     a {
         font-size: 14px;
-        padding: 5px 11px;
+        padding: 5px 8px;
     }
 
     li {
@@ -75,9 +75,8 @@ li {
     }
 
     .inicia-sesion {
-        font-size: 14px;
-        padding: 9px 15px;
-        margin-left: 40px; /* Ajustado para mover más a la izquierda */
+        font-size: 12px; /* Reducido aún más para pantallas pequeñas */
+        padding: 5px 8px; /* Más compacto */
         display: inline;
     }
 }
@@ -108,7 +107,7 @@ h1 {
 
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 30px;
+        font-size: 25px;
         left: 47%;
         transform: translateX(-50%);
     }
@@ -116,8 +115,8 @@ h1 {
 
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 25px;
-        left: 47%;
+        font-size: 23px;
+        left: 50%;
         transform: translateX(-50%);
     }
 }
