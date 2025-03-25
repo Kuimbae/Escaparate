@@ -2,63 +2,63 @@
     "Jeans": [
         {
             "id": 1,
-            "nombre": "Jeans azul claro",
+            "nombre": "Pantalón Jeans azul claro",
             "imagen": "pantalon/jeans/jeans1.jpeg",
             "precio": "25.99",
             "descripcion": "Jeans azul clásico de corte recto"
         },
         {
             "id": 2,
-            "nombre": "Jeans skinny",
+            "nombre": "Pantalón Jeans skinny",
             "imagen": "pantalon/jeans/jeans2.jpeg",
             "precio": "27.50",
             "descripcion": "Jeans ajustados con detalles rasgados"
         },
         {
             "id": 3,
-            "nombre": "Jeans pitillo",
+            "nombre": "Pantalón Jeans pitillo",
             "imagen": "pantalon/jeans/jeans3.jpeg",
             "precio": "30.00",
             "descripcion": "Jeans holgados estilo vintage"
         },
         {
             "id": 4,
-            "nombre": "Jeans rectos",
+            "nombre": "Pantalón Jeans rectos",
             "imagen": "pantalon/jeans/jeans4.jpeg",
             "precio": "28.90",
             "descripcion": "Jeans de mezclilla con dobladillo"
         },
         {
             "id": 5,
-            "nombre": "Jeans rotos",
+            "nombre": "Pantalón Jeans rotos",
             "imagen": "pantalon/jeans/jeans5.jpeg",
             "precio": "32.99",
             "descripcion": "Jeans negros con efecto desgastado"
         },
         {
             "id": 6,
-            "nombre": "Jeans anchos",
+            "nombre": "Pantalón Jeans anchos",
             "imagen": "pantalon/jeans/jeans6.jpeg",
             "precio": "29.99",
             "descripcion": "Jeans skinny con cintura alta"
         },
         {
             "id": 7,
-            "nombre": "Jeans skinny claro",
+            "nombre": "Pantalón Jeans skinny claro",
             "imagen": "pantalon/jeans/jeans7.jpeg",
             "precio": "26.99",
             "descripcion": "Jeans estilo boyfriend con bolsillos"
         },
         {
             "id": 8,
-            "nombre": "Jeans claros rotos",
+            "nombre": "Pantalón Jeans claros rotos",
             "imagen": "pantalon/jeans/jeans8.jpeg",
             "precio": "31.50",
             "descripcion": "Jeans azul oscuro con costuras visibles"
         },
         {
             "id": 9,
-            "nombre": "Jeans skinny negro",
+            "nombre": "Pantalón Jeans skinny negro",
             "imagen": "pantalon/jeans/jeans9.jpeg",
             "precio": "34.00",
             "descripcion": "Jeans ajustados con efecto push-up"
@@ -67,63 +67,63 @@
     "Traje": [
         {
             "id": 1,
-            "nombre": "Traje ancho beige",
+            "nombre": "Pantalón Traje ancho beige",
             "imagen": "pantalon/traje/traje1.jpeg",
             "precio": "89.99",
             "descripcion": "Traje elegante gris para oficina"
         },
         {
             "id": 2,
-            "nombre": "Traje gris",
+            "nombre": "Pantalón Traje gris",
             "imagen": "pantalon/traje/traje2.jpeg",
             "precio": "95.00",
             "descripcion": "Traje negro clásico con chaqueta"
         },
         {
             "id": 3,
-            "nombre": "Traje beige",
+            "nombre": "Pantalón Traje beige",
             "imagen": "pantalon/traje/traje3.jpeg",
             "precio": "120.50",
             "descripcion": "Traje azul marino de corte slim"
         },
         {
             "id": 4,
-            "nombre": "Traje recto negro",
+            "nombre": "Pantalón Traje recto negro",
             "imagen": "pantalon/traje/traje4.jpeg",
             "precio": "110.00",
             "descripcion": "Traje beige ideal para eventos formales"
         },
         {
             "id": 5,
-            "nombre": "Traje amarillo",
+            "nombre": "Pantalón Traje amarillo",
             "imagen": "pantalon/traje/traje5.jpeg",
             "precio": "99.99",
             "descripcion": "Traje con chaleco incluido"
         },
         {
             "id": 6,
-            "nombre": "Traje recto gris",
+            "nombre": "Pantalón Traje recto gris",
             "imagen": "pantalon/traje/traje6.jpeg",
             "precio": "85.50",
             "descripcion": "Traje elegante con solapas de satén"
         },
         {
             "id": 7,
-            "nombre": "Traje pitillo beige",
+            "nombre": "Pantalón Traje pitillo beige",
             "imagen": "pantalon/traje/traje7.jpeg",
             "precio": "98.99",
             "descripcion": "Traje moderno con pantalón ajustado"
         },
         {
             "id": 8,
-            "nombre": "Traje marrón",
+            "nombre": "Pantalón Traje marrón",
             "imagen": "pantalon/traje/traje8.jpeg",
             "precio": "105.00",
             "descripcion": "Traje formal con corbata a juego"
         },
         {
             "id": 9,
-            "nombre": "Traje blanco",
+            "nombre": "Pantalón Traje blanco",
             "imagen": "pantalon/traje/traje9.jpeg",
             "precio": "115.00",
             "descripcion": "Traje azul oscuro con botones dorados"
@@ -327,63 +327,63 @@
     "Botas": [
         {
             "id": 1,
-            "nombre": "Botas flecos",
+            "nombre": "Zapatillas Botas flecos",
             "imagen": "zapatos/botas/botas1.jpg",
             "precio": "50.00",
             "descripcion": "Botas de cuero negras con tacón"
         },
         {
             "id": 2,
-            "nombre": "Botas beiges",
+            "nombre": "Zapatillas Botas beiges",
             "imagen": "zapatos/botas/botas2.jpg",
             "precio": "55.00",
             "descripcion": "Botas marrones de gamuza con cierre lateral"
         },
         {
             "id": 3,
-            "nombre": "Botas cowboy",
+            "nombre": "Zapatillas Botas cowboy",
             "imagen": "zapatos/botas/botas3.jpg",
             "precio": "60.00",
             "descripcion": "Botas altas con plataforma y tacón grueso"
         },
         {
             "id": 4,
-            "nombre": "Botines beige",
+            "nombre": "Zapatillas Botines beige",
             "imagen": "zapatos/botas/botas4.jpg",
             "precio": "45.00",
             "descripcion": "Botines de cuero negro con detalle de hebilla"
         },
         {
             "id": 5,
-            "nombre": "Botines marrón",
+            "nombre": "Zapatillas Botines marrón",
             "imagen": "zapatos/botas/botas5.jpg",
             "precio": "65.00",
             "descripcion": "Botas estilo cowboy de cuero marrón"
         },
         {
             "id": 6,
-            "nombre": "Botas animal print",
+            "nombre": "Zapatillas Botas animal print",
             "imagen": "zapatos/botas/botas6.jpg",
             "precio": "70.00",
             "descripcion": "Botas altas de gamuza grises con tacón"
         },
         {
             "id": 7,
-            "nombre": "Botas altas",
+            "nombre": "Zapatillas Botas altas",
             "imagen": "zapatos/botas/botas7.jpg",
             "precio": "48.00",
             "descripcion": "Botas cortas negras de gamuza"
         },
         {
             "id": 8,
-            "nombre": "botas negras cowboy",
+            "nombre": "Zapatillas botas negras cowboy",
             "imagen": "zapatos/botas/botas8.jpg",
             "precio": "52.00",
             "descripcion": "Botines altos con tacón delgado"
         },
         {
             "id": 9,
-            "nombre": "Botas anchas",
+            "nombre": "Zapatillas Botas anchas",
             "imagen": "zapatos/botas/botas9.jpg",
             "precio": "38.00",
             "descripcion": "Botas de lluvia impermeables y cómodas"
