@@ -13,13 +13,21 @@
 </head>
 
 <body>
-    <h1>Cesta de la compra</h1>
+    <div class="factura-info">
+        <div class="factura-header">
+            <img src="img/logo.png" alt="Logo de la Tienda">
+            <h1>Factura de Compra</h1>
+        </div>
+        <div class="cliente-info">
+            <p><strong>Cliente:</strong> Peñascal</p>
+            <p><strong>Dirección:</strong> Calle bolueta nº 67</p>
+        </div>
+    </div>
+    <h1 class="titulo1">Cesta de la compra</h1>
     <div id="carrito-contenedor"></div>
     <h2 id="total"></h2>
-
-
     <button id="vaciar-carrito" class="vaciar-carrito">Vaciar carrito</button>
-    <button id="realizar-pedido" class="realizar-pedido" onclick="mostrarMensaje()">Solicitar Presupuesto</button>
+    <button id="realizar-pedido" class="realizar-pedido" onclick="mostrarMensaje()">Realizar pedido</button>
     <a href="producto.html" class="back-boton">
         <i class="fas fa-arrow-left"></i>Seguir comprando</a>
     <div id="modal" class="modal" style="display: none;">

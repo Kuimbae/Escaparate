@@ -1,64 +1,111 @@
 body {
-    margin: 0;
+    font-family: Arial, sans-serif;
+    margin: 20px;
     padding: 0;
-    font-size: 12px;
+    color: black;
+
 }
 
-.container {
-    max-width: 100%;
-    padding: 20px;
-    box-shadow: none;
-    border-radius: 0;
+h1,
+h2,
+h3 {
+    color: #333;
+    text-align: center;
 }
 
-.encabezado {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #4CAF50;
-}
-
-.encabezado h1 {
-    font-size: 1.5rem;
-}
-
-.informacion-factura {
-    margin-bottom: 30px;
-    padding: 10px;
-    font-size: 0.9rem;
-}
-
-.productos {
-    margin-bottom: 20px;
-}
-
-.producto {
+/* Mostrar el logo y los datos del cliente solo en la impresión */
+.factura-info {
+    border-radius: 4px;
+    width: 90%;
+    max-width: 1083px;
+    margin-top: 55px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: block;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+}
+#carrito-contenedor p{
+    color: #000;
+}
+/* Logo de la tienda */
+.factura-header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.producto img {
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
+.factura-header img {
+    width: 600px;
 }
 
-.informacion-producto {
-    display: block;
-    margin-left: 80px;
-}
-
-.total {
-    text-align: left;
-    font-size: 1.2rem;
-}
-
-.pie-de-pagina {
+/* Información del cliente */
+.cliente-info {
     margin-top: 20px;
-    font-size: 0.8rem;
+    text-align: left;
+    font-size: 20px;
 }
 
-.btn-imprimir, .eliminar-articulo, .control-cantidad {
+/* Ocultar elementos que no deben imprimirse */
+.menu-hamburguesa,
+.titulo1,
+.control-cantidad,
+.eliminar-articulo,
+.modal-contenido,
+.barra-lateral,
+.carrito-contador,
+.vaciar-carrito,
+.realizar-pedido,
+.back-boton,
+#modal {
     display: none;
 }
 
+/* Estilo de los productos en el carrito */
+#carrito-contenedor {
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.producto {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.producto img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.producto h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.producto p {
+    margin: 2px 0;
+    font-size: 18px;
+}
+
+/* Total de la compra */
+#total {
+    width: 90%;
+    max-width: 1083px;
+    margin-top: 55px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    border: gray solid 2px;
+    border-radius: 4px;
+
+}
+
+
+/* Ajustar el espacio y evitar desbordamientos */
+.modal-contenido {
+    padding: 20px;
+}
