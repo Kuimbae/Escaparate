@@ -42,11 +42,49 @@ document.addEventListener("DOMContentLoaded", () => {
     <h3>${producto.nombre}</h3>
     <p>${producto.descripcion}</p>
     <p>Precio: $${producto.precio}</p>
+    <div class="cantidad">
+        <button class="boton-cantidad boton-menos">&#8722;</button>
+        <input type="number" value="1" min="1" max="99" readonly class="cantidad-input">
+        <button class="boton-cantidad boton-mas">&#43;</button>
+    </div>
+    <button>Añadir al carrito</button>
     `;
                 contenedorImagenes.appendChild(productoDiv);
+                const cantidadInputField = productoDiv.querySelector(".cantidad-input");
+                const botonMenos = productoDiv.querySelector(".boton-menos");
+                const botonMas = productoDiv.querySelector(".boton-mas");
+                const botonAgregar = productoDiv.querySelector("button:last-of-type");
+                botonMenos.onclick = () => {
+                    let cantidadInput = parseInt(cantidadInputField.value);
+                    if (cantidadInput > 1) {
+                        cantidadInput--;
+                        cantidadInputField.value = cantidadInput;
+                    }
+                };
+                botonMas.onclick = () => {
+                    let cantidadInput = parseInt(cantidadInputField.value);
+                    cantidadInput++;
+                    cantidadInputField.value = cantidadInput;
+                };
+                botonAgregar.onclick = () => {
+                    const cantidad = cantidadInputField.value;
+                    console.log(`Producto añadido al carrito: ${producto.nombre} x${cantidad}`);
+                    const productoCarrito = {
+                        nombre: producto.nombre,
+                        imagen: producto.imagen,
+                        precio: producto.precio,
+                        cantidad: cantidad
+                    };
+                    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+                    carrito.push(productoCarrito);
+                    localStorage.setItem("carrito", JSON.stringify(carrito));
+                    actualizarContadorCarrito();
+                };
+
             });
         } else {
             contenedorImagenes.innerHTML = "<p>No se encontraron productos.</p>";
+            
         }
     }
 
