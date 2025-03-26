@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-    document.getElementById("menu-icon").addEventListener("click", function () {
+//menu hamburguesa desactivada
+    /*document.getElementById("menu-icon").addEventListener("click", function () {
         document.getElementById("menu").classList.toggle("active");
-    });
+    });*/
 
     function redirigirAProductos() {
         let searchTerm = document.querySelector(".search-bar").value.trim(); // Obtener el término de búsqueda//
