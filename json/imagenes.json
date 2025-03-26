@@ -327,63 +327,63 @@
     "Botas": [
         {
             "id": 1,
-            "nombre": "Zapatillas Botas flecos",
+            "nombre": "Botas flecos",
             "imagen": "zapatos/botas/botas1.jpg",
             "precio": "50.00",
             "descripcion": "Botas de cuero negras con tacón"
         },
         {
             "id": 2,
-            "nombre": "Zapatillas Botas beiges",
+            "nombre": "Botas beiges",
             "imagen": "zapatos/botas/botas2.jpg",
             "precio": "55.00",
             "descripcion": "Botas marrones de gamuza con cierre lateral"
         },
         {
             "id": 3,
-            "nombre": "Zapatillas Botas cowboy",
+            "nombre": "Botas cowboy",
             "imagen": "zapatos/botas/botas3.jpg",
             "precio": "60.00",
             "descripcion": "Botas altas con plataforma y tacón grueso"
         },
         {
             "id": 4,
-            "nombre": "Zapatillas Botines beige",
+            "nombre": "Botines beige",
             "imagen": "zapatos/botas/botas4.jpg",
             "precio": "45.00",
             "descripcion": "Botines de cuero negro con detalle de hebilla"
         },
         {
             "id": 5,
-            "nombre": "Zapatillas Botines marrón",
+            "nombre": "Botines marrón",
             "imagen": "zapatos/botas/botas5.jpg",
             "precio": "65.00",
             "descripcion": "Botas estilo cowboy de cuero marrón"
         },
         {
             "id": 6,
-            "nombre": "Zapatillas Botas animal print",
+            "nombre": "Botas animal print",
             "imagen": "zapatos/botas/botas6.jpg",
             "precio": "70.00",
             "descripcion": "Botas altas de gamuza grises con tacón"
         },
         {
             "id": 7,
-            "nombre": "Zapatillas Botas altas",
+            "nombre": "Botas altas",
             "imagen": "zapatos/botas/botas7.jpg",
             "precio": "48.00",
             "descripcion": "Botas cortas negras de gamuza"
         },
         {
             "id": 8,
-            "nombre": "Zapatillas botas negras cowboy",
+            "nombre": "botas negras cowboy",
             "imagen": "zapatos/botas/botas8.jpg",
             "precio": "52.00",
             "descripcion": "Botines altos con tacón delgado"
         },
         {
             "id": 9,
-            "nombre": "Zapatillas Botas anchas",
+            "nombre": "Botas anchas",
             "imagen": "zapatos/botas/botas9.jpg",
             "precio": "38.00",
             "descripcion": "Botas de lluvia impermeables y cómodas"
