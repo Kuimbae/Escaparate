@@ -19,10 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-//menu hamburguesa desactivada
-    /*document.getElementById("menu-icon").addEventListener("click", function () {
-        document.getElementById("menu").classList.toggle("active");
-    });*/
 
     function redirigirAProductos() {
         let searchTerm = document.querySelector(".search-bar").value.trim(); // Obtener el término de búsqueda//
@@ -86,8 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("Por favor, ingrese un correo electrónico válido.");
             }
         }
-
-
 
         // Función para validar el formato del correo
         function validateEmail(email) {
