@@ -27,42 +27,42 @@ document.addEventListener("DOMContentLoaded", () => {
                 const controlCantidad = document.createElement("div");
                 controlCantidad.classList.add("control-cantidad");
 
-               
+
                 const precio = document.createElement("p");
                 precio.textContent = `Precio: ${producto.precio}€ x ${producto.cantidad} = ${(producto.precio * producto.cantidad).toFixed(2)}€`;
                 productoDiv.appendChild(precio);
 
-                 // Botón de disminuir cantidad
-                 const btnDisminuir = document.createElement("button");
-                 btnDisminuir.textContent = "-";
-                 btnDisminuir.addEventListener("click", () => {
-                     if (producto.cantidad > 1) {
-                         producto.cantidad--;
-                     } else {
-                         carrito.splice(index, 1);
-                     }
-                     guardarCarrito();
-                     actualizarCarrito();
-                 });
-                 controlCantidad.appendChild(btnDisminuir);
- 
-                 // Elemento para mostrar la cantidad
-                 const cantidad = document.createElement("span");
-                 cantidad.textContent = producto.cantidad;
-                 controlCantidad.appendChild(cantidad);
- 
-                 // Botón de aumentar cantidad
-                 const btnAumentar = document.createElement("button");
-                 btnAumentar.textContent = "+";
-                 btnAumentar.addEventListener("click", () => {
-                     producto.cantidad++;
-                     guardarCarrito();
-                     actualizarCarrito();
-                 });
-                 controlCantidad.appendChild(btnAumentar);
- 
-                 productoDiv.appendChild(controlCantidad);
- 
+                // Botón de disminuir cantidad
+                const btnDisminuir = document.createElement("button");
+                btnDisminuir.textContent = "-";
+                btnDisminuir.addEventListener("click", () => {
+                    if (producto.cantidad > 1) {
+                        producto.cantidad--;
+                    } else {
+                        carrito.splice(index, 1);
+                    }
+                    guardarCarrito();
+                    actualizarCarrito();
+                });
+                controlCantidad.appendChild(btnDisminuir);
+
+                // Elemento para mostrar la cantidad
+                const cantidad = document.createElement("span");
+                cantidad.textContent = producto.cantidad;
+                controlCantidad.appendChild(cantidad);
+
+                // Botón de aumentar cantidad
+                const btnAumentar = document.createElement("button");
+                btnAumentar.textContent = "+";
+                btnAumentar.addEventListener("click", () => {
+                    producto.cantidad++;
+                    guardarCarrito();
+                    actualizarCarrito();
+                });
+                controlCantidad.appendChild(btnAumentar);
+
+                productoDiv.appendChild(controlCantidad);
+
 
                 // Botón de eliminar artículo
                 const btnEliminar = document.createElement("button");

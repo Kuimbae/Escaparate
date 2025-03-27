@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         } else {
             contenedorImagenes.innerHTML = "<p>No se encontraron productos.</p>";
-            
+
         }
     }
 

@@ -5,11 +5,13 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 .cantidad {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 /* Ocultar las flechas en navegadores basados en WebKit (Chrome, Safari, Edge) */
 .cantidad-input::-webkit-inner-spin-button,
 .cantidad-input::-webkit-outer-spin-button {
@@ -21,13 +23,15 @@
 .cantidad-input {
     -moz-appearance: textfield;
 }
-.detalles{
+
+.detalles {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .boton-cantidad {
     margin-bottom: 5%;
     width: 20px;
@@ -64,7 +68,8 @@
     font-size: 16px;
     font-weight: bold;
     background-color: #f8f9fa;
-    pointer-events: none; /* Evita la edición manual */
+    pointer-events: none;
+    /* Evita la edición manual */
 }
 
 @media screen and (max-width: 768px) {
@@ -88,41 +93,51 @@
     width: 50px;
     font-size: 16px;
 }
+
 header {
     background-color: rgba(0, 0, 0, 0.979);
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Distribuye los elementos: uno a la izquierda y otro a la derecha */
+    justify-content: space-between;
+    /* Distribuye los elementos: uno a la izquierda y otro a la derecha */
     padding: 10px;
-    position: fixed; /* Hace que el header sea fijo */
-    top: 0; /* Lo posiciona en la parte superior */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    position: fixed;
+    /* Hace que el header sea fijo */
+    top: 0;
+    /* Lo posiciona en la parte superior */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
 }
 
 h1 {
     font-size: 35px;
-    font-weight: bold; /* Hace la letra más gruesa */
-    margin-bottom: 15px; /* Espacio entre el h1 y el botón */
+    font-weight: bold;
+    /* Hace la letra más gruesa */
+    margin-bottom: 15px;
+    /* Espacio entre el h1 y el botón */
     text-align: center;
     font-family: Arial, sans-serif;
     color: white;
     width: 100%;
 }
+
 /* ESTILO RESPONSIVO PARA H1 */
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 25px;
-        margin: 0 auto; /* Centra horizontalmente */
+        margin: 0 auto;
+        /* Centra horizontalmente */
         margin-left: 60px;
-        
+
     }
 }
 
 @media screen and (max-width: 480px) {
     h1 {
         font-size: 20px;
-        margin: 0 auto; /* Centra horizontalmente */
+        margin: 0 auto;
+        /* Centra horizontalmente */
         margin-left: 60px;
     }
 }
@@ -213,35 +228,47 @@ li {
 /* Contenedor de imágenes */
 .contenedor-imagenes {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Muestra 3 imágenes por fila */
-    gap: 7%; /* Espacio entre imágenes */
-    padding: 1px; /* Espacio alrededor del contenedor */
-    margin: 0 auto; /* Centra el contenedor */
-    width: 50%; /* Asegura que ocupe todo el ancho disponible */
+    grid-template-columns: repeat(3, 1fr);
+    /* Muestra 3 imágenes por fila */
+    gap: 7%;
+    /* Espacio entre imágenes */
+    padding: 1px;
+    /* Espacio alrededor del contenedor */
+    margin: 0 auto;
+    /* Centra el contenedor */
+    width: 50%;
+    /* Asegura que ocupe todo el ancho disponible */
 }
 
 /* Para pantallas más pequeñas */
 @media (max-width: 768px) {
     .contenedor-imagenes {
-        grid-template-columns: repeat(2, 1fr); /* Muestra 2 imágenes por fila */
+        grid-template-columns: repeat(2, 1fr);
+        /* Muestra 2 imágenes por fila */
     }
 
     .contenedor-imagenes img {
-        width: 100%; /* Las imágenes ocupan el 100% del ancho del contenedor */
-        height: auto; /* Mantiene la proporción original de las imágenes */
-        object-fit: cover; /* Ajusta la imagen para que se adapte al contenedor, recortando si es necesario */
+        width: 100%;
+        /* Las imágenes ocupan el 100% del ancho del contenedor */
+        height: auto;
+        /* Mantiene la proporción original de las imágenes */
+        object-fit: cover;
+        /* Ajusta la imagen para que se adapte al contenedor, recortando si es necesario */
     }
 }
 
 /* Para pantallas muy pequeñas (como teléfonos) */
 @media (max-width: 480px) {
     .contenedor-imagenes {
-        grid-template-columns: 1fr; /* Muestra 1 imagen por fila */
+        grid-template-columns: 1fr;
+        /* Muestra 1 imagen por fila */
     }
 
     .contenedor-imagenes img {
-        width: 100%; /* Las imágenes ocupan el 100% del ancho del contenedor */
-        height: auto; /* Mantiene la proporción original de las imágenes */
+        width: 100%;
+        /* Las imágenes ocupan el 100% del ancho del contenedor */
+        height: auto;
+        /* Mantiene la proporción original de las imágenes */
     }
 }
 
@@ -249,7 +276,8 @@ li {
 /* Contenedor de cada producto */
 .producto {
     background-color: rgba(245, 245, 245, 0.479);
-    aspect-ratio: 1/1; /* Hace que todas las cajas sean cuadradas */
+    aspect-ratio: 1/1;
+    /* Hace que todas las cajas sean cuadradas */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -267,10 +295,11 @@ li {
         height: 200%;
         width: 200%;
         margin-top: 55px;
-        margin-left: -45px; /* Mueve más a la izquierda */
+        margin-left: -45px;
+        /* Mueve más a la izquierda */
         display: flex;
         justify-content: center;
-        align-items: center;   
+        align-items: center;
     }
 }
 
@@ -280,7 +309,8 @@ li {
         height: 150%;
         width: 150%;
         margin-top: 35px;
-        margin-left: -35px; /* Mueve más a la izquierda */
+        margin-left: -35px;
+        /* Mueve más a la izquierda */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -289,7 +319,8 @@ li {
 
 .imagen {
     width: 100%;
-    height: 70%; /* Ajusta el tamaño de la imagen dentro del contenedor */
+    height: 70%;
+    /* Ajusta el tamaño de la imagen dentro del contenedor */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -298,26 +329,32 @@ li {
 .imagen img {
     width: 40%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen sin deformarse */
+    object-fit: cover;
+    /* Ajusta la imagen sin deformarse */
 }
 
 /* Responsivo para pantallas de 768px o menos */
 @media screen and (max-width: 768px) {
     .imagen img {
-        width: 60%; /* Ajusta el ancho para pantallas medianas */
-        height: auto; /* Mantiene la proporción de la imagen */
+        width: 60%;
+        /* Ajusta el ancho para pantallas medianas */
+        height: auto;
+        /* Mantiene la proporción de la imagen */
     }
 }
 
 /* Responsivo para pantallas de 480px o menos */
 @media screen and (max-width: 480px) {
     .imagen img {
-        width: 80%; /* Ajusta el ancho para pantallas pequeñas */
-        height: auto; /* Mantiene la proporción de la imagen */
+        width: 80%;
+        /* Ajusta el ancho para pantallas pequeñas */
+        height: auto;
+        /* Mantiene la proporción de la imagen */
     }
 }
 
-h3, p {
+h3,
+p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,18 +365,22 @@ h3, p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
+
 }
 
 @media screen and (max-width: 768px) {
-    h3, p {
+
+    h3,
+    p {
         flex-direction: row;
         font-size: 35px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    h3, p {
+
+    h3,
+    p {
         flex-direction: column;
         font-size: 17px;
     }
@@ -347,11 +388,12 @@ h3, p {
 
 
 
-.btnAgregarCarrito{
+.btnAgregarCarrito {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px auto; /* Esto lo centra horizontalmente */
+    margin: 10px auto;
+    /* Esto lo centra horizontalmente */
     background-color: #e0424f;
     font-size: 15px;
     color: black;
@@ -361,6 +403,7 @@ h3, p {
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .btnAgregarCarrito:hover {
     background-color: #0458b3c9;
 }
@@ -442,7 +485,7 @@ body {
         width: 150px;
     }
 
-   
+
 
     /* --- MOSTRAR MENÚ AL HACER CLIC (SIN JS) --- */
     .menu-hamburguesa:focus+.barra-lateral,
@@ -473,11 +516,13 @@ body {
     border-radius: 5px;
     position: absolute;
     left: 0;
-    margin-left: 25px; /* Ajusta según sea necesario */
+    margin-left: 25px;
+    /* Ajusta según sea necesario */
 }
 
 .back-boton:hover {
-    color: gray; /* Cambia el color al pasar el ratón */
+    color: gray;
+    /* Cambia el color al pasar el ratón */
 }
 
 
@@ -487,12 +532,13 @@ body {
     .back-boton {
         display: none;
     }
+}
+
+@media screen and (max-width: 480px) {
+    .back-boton {
+        display: none;
     }
-    @media screen and (max-width: 480px) {
-        .back-boton {
-            display: none;
-        }
-        }
+}
 
 .fas.fa-arrow-left {
     font-size: 35px;
@@ -510,6 +556,3 @@ body {
         display: none;
     }
 }
-
-
- 

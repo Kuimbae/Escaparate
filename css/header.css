@@ -1,8 +1,8 @@
-
 /* Estilo del encabezado */
 header {
     background: rgba(44, 32, 32, 0.7);
     text-align: center;
     padding: 20px 0;
-    margin-bottom: 30px; /* Espacio entre el header y el contenedor de login */
+    margin-bottom: 30px;
+    /* Espacio entre el header y el contenedor de login */
 }

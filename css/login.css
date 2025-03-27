@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 1;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 /* Estilos generales del body y la estructura base */
@@ -14,18 +14,21 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    justify-content: space-between; /* Esto permite que el footer quede en la parte de abajo */
+    justify-content: space-between;
+    /* Esto permite que el footer quede en la parte de abajo */
 }
 
 body::before {
     content: "";
     position: fixed;
     top: 0;
-    right: 0; /* Cambiado de left a right */
+    right: 0;
+    /* Cambiado de left a right */
     width: 50%;
     height: 100%;
     background: url('https://www.chio-lecca.edu.pe/cdn/shop/articles/chio-lecca-blog-estilo-y-moda.jpg?v=1673918894') center/cover no-repeat;
-    opacity: 0.5; /* Ajusta la opacidad */
+    opacity: 0.5;
+    /* Ajusta la opacidad */
     z-index: -1;
 }
 
@@ -42,7 +45,7 @@ body::before {
     body::before {
         width: 100%;
         height: 55%;
-   }
+    }
 }
 
 
@@ -58,7 +61,8 @@ body::before {
 }
 
 .back-boton:hover {
-    color: gray; /* Cambia el color al pasar el ratón */
+    color: gray;
+    /* Cambia el color al pasar el ratón */
 }
 
 /* Responsividad para pantallas de 768px */
@@ -88,30 +92,32 @@ h1 {
         font-size: 30px;
     }
 }
+
 /* Responsividad para pantallas de 480px */
 @media (max-width: 480px) {
     h1 {
         font-size: 30px;
     }
 
-main {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    flex: 1; /* Esto hace que el main ocupe el espacio restante */
-    padding: 20px;
-}
-
-/* Responsividad para pantallas de 768px */
-@media (max-width: 768px) {
     main {
-        width: 100%;
-        padding: 5px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex: 1;
+        /* Esto hace que el main ocupe el espacio restante */
+        padding: 20px;
     }
-}
 
-/* Responsividad para pantallas de 480px */
+    /* Responsividad para pantallas de 768px */
+    @media (max-width: 768px) {
+        main {
+            width: 100%;
+            padding: 5px;
+        }
+    }
+
+    /* Responsividad para pantallas de 480px */
 
     main {
         width: 100%;
@@ -184,7 +190,7 @@ h2 {
 button.btn {
     width: 100%;
     padding: 12px;
-    background-color:rgba(204, 167, 66, 0.226);
+    background-color: rgba(204, 167, 66, 0.226);
     color: black;
     border: none;
     font-size: 16px;
@@ -210,6 +216,3 @@ button.btn:hover {
 .link a:hover {
     text-decoration: underline;
 }
-
-
-
